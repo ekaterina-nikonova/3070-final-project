@@ -5,17 +5,21 @@ from dotenv import load_dotenv
 
 from perplexity import Perplexity
 
-from data_generation.missing_words import words
+from data_generation.missing_words import find_missing_words
 from data_generation.vocabulary import vocabulary_dict
 
 load_dotenv()
 
 def generate():
+    vocabulary_words = list(vocabulary_dict.keys())
+    vocabulary_str = "\n".join(vocabulary_words)
+
+    generated_sentences_filepath = Path(__file__.rsplit("/", 1)[0]) / "generated_sentences_unique.txt"
+    generated_sentences_str = generated_sentences_filepath.read_text()
+
+    entries = find_missing_words(generated_sentences_str, vocabulary_words)
+
     client = Perplexity()  # Automatically uses PERPLEXITY_API_KEY
-
-    vocabulary_str = "\n".join(list(vocabulary_dict.keys()))
-    entries = [word.strip() for word in words.strip().split("\n") if word.strip()]
-
     for i, entry in enumerate(entries):
         print(i, ":", entry)
         prompt = (
@@ -125,4 +129,4 @@ def clean_generated_sentences():
 
 
 if __name__ == "__main__":
-    clean_generated_sentences()
+    generate()
