@@ -1,0 +1,1 @@
+"""Generation of sentences containing restricted vocabulary."""
