@@ -127,17 +127,23 @@ def fetch_similar_words_with_translations(
 def fetch_similar_entries(
     entry: str,
     results_num: int = 50,
+    fetch_sentences: bool = False,
 ) -> list[str]:
     """Fetch similar entries from a Chroma vector database.
 
     Args:
         entry: The entry similar to which entries are to be retrieved.
         results_num: The number of similar entries to retrieve.
+        fetch_sentences: Whether to retrieve similar sentences instead of similar words.
 
     Returns:
         A list of strings representing the most similar entries.
     """
-    db_dirpath =  DEFAULT_WORDS_DB_DIRPATH
+    db_dirpath =  (
+        DEFAULT_SENTENCES_DB_DIRPATH
+        if fetch_sentences else
+        DEFAULT_WORDS_DB_DIRPATH
+    )
 
     retriever = get_vector_store_retriever(db_dirpath, results_num)
 
