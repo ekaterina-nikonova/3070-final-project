@@ -7,12 +7,12 @@ from perplexity import Perplexity
 
 from data_generation.missing_words import find_missing_words
 from data_generation.vocabulary import vocabulary_dict
+from retrieval.embedding import fetch_similar_entries
 
 load_dotenv()
 
 def generate():
     vocabulary_words = list(vocabulary_dict.keys())
-    vocabulary_str = "\n".join(vocabulary_words)
 
     generated_sentences_filepath = Path(__file__.rsplit("/", 1)[0]) / "generated_sentences_unique.txt"
     generated_sentences_str = generated_sentences_filepath.read_text()
@@ -21,6 +21,10 @@ def generate():
 
     client = Perplexity()  # Automatically uses PERPLEXITY_API_KEY
     for i, entry in enumerate(entries):
+        # From the vector store, fetch the 100 most similar words to the entry to use as a vocabulary.
+        vocabulary_words = fetch_similar_entries(entry, results_num=100)
+        vocabulary_str = "\n".join(vocabulary_words)
+
         print(i, ":", entry)
         prompt = (
             "Here is a list of Japanese words that are currently in my vocabulary:\n\n"
@@ -82,9 +86,6 @@ def generate():
             }
         )
 
-        with open("perplexity.log", "a") as log_f:
-            log_f.write(f"Response for entry {entry}\n\n")
-            log_f.write(f"{completion.choices[0].message.content}\n\n")
 
         try:
             sentences = json.loads(completion.choices[0].message.content)["sentences"]
@@ -95,6 +96,10 @@ def generate():
                 log_f.write(f"Failed response for entry {entry}\n\n")
                 log_f.write(f"{completion.choices[0].message.content}\n\n")
             continue
+        else:
+            with open("perplexity.log", "a") as log_f:
+                log_f.write(f"Response for entry {entry}\n\n")
+                log_f.write(f"{completion.choices[0].message.content}\n\n")
 
         with open("generated_sentences.txt", "a") as f:
             for sentence in sentences:
