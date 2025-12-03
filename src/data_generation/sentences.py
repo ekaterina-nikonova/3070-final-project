@@ -7,9 +7,11 @@ from perplexity import Perplexity
 
 from data_generation.missing_words import find_missing_words
 from data_generation.vocabulary import vocabulary_dict
-from retrieval.embedding import fetch_similar_entries
+from retrieval.embedding import fetch_similar_entries, embed_sentences
 
 load_dotenv()
+
+CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
 
 def generate():
     vocabulary_words = list(vocabulary_dict.keys())
@@ -114,9 +116,7 @@ def clean_generated_sentences():
     # If the length of a group exceeds a threshold of 10,
     # only keep the first 10 sentences from that group.
 
-    current_module_dirpath = Path(__file__.rsplit("/", 1)[0])
-
-    source_filepath = current_module_dirpath / "generated_sentences.txt"
+    source_filepath = CURRENT_MODULE_DIRPATH / "generated_sentences.txt"
     with open(source_filepath) as f:
         contents = f.read()
 
@@ -127,10 +127,16 @@ def clean_generated_sentences():
 
     unique_sentences = list(set([s.strip() for s in cleaned_sentences if s.strip()]))
 
-    target_filepath = current_module_dirpath / "generated_sentences_unique.txt"
+    target_filepath = CURRENT_MODULE_DIRPATH / "generated_sentences_unique.txt"
     with open(target_filepath, "w") as f:
         for sentence in unique_sentences:
             f.write(f"{sentence}\n")
+
+
+def embed_clean_sentences():
+    with open(CURRENT_MODULE_DIRPATH / "generated_sentences_unique.txt") as f:
+        sentences = f.read().splitlines()
+    embed_sentences(sentences)
 
 
 if __name__ == "__main__":
