@@ -1,92 +1,83 @@
 import json
+from enum import StrEnum
 
 from dotenv import load_dotenv
 from huggingface_hub.errors import GenerationError
+from langchain_ollama import ChatOllama
 from perplexity import Perplexity
 
+from data_generation.prompt_utilities import make_text_system_message, make_questions_system_message
 from retrieval.embedding import fetch_similar_entries
 
 load_dotenv()
 
-def generate_text(topic: str):
+class Model(StrEnum):
+    GEMMA3_270M = "gemma3:270m"
+    GEMMA3_1B = "gemma3:1b"
+    GEMMA_JPN = "schroneko/gemma-2-2b-jpn-it:q4_K_S"
+    DEEPSEEK_R1_8B = "deepseek-r1:8b"
+    QWEN3_4B = "qwen3:4b"
+
+
+def generate_text(topic: str, model_name: Model = Model.GEMMA_JPN) -> str:
     if not topic:
         raise ValueError("Topic must be specified.")
 
-    client = Perplexity()  # Automatically uses PERPLEXITY_API_KEY
+    model = ChatOllama(model=model_name, validate_model_on_init=True)
 
-    # From the vector store, fetch 20 sentences related to the topic to use as vocabulary.
-    vocabulary_words = fetch_similar_entries(topic, results_num=50, fetch_sentences=True)
-    vocabulary_str = "\n".join(vocabulary_words)
+    vocabulary_sentences = fetch_similar_entries(topic, results_num=50, fetch_sentences=True)
 
-    print("Vocabulary sentences:\n", vocabulary_str)
-
-    prompt = (
-        f"Write an A1-level text in Japanese on the topic {topic!r}.\n\n"
-        
-        "Only use words and phrases from the following sentences:\n\n"
-
-        f"{vocabulary_str}\n\n"
-        
-        "Use a range of grammatical forms in present and past tense. Example sentences:\n\n"
-    
-        "姉が一人います。\n"
-        "昨日姉は綺麗なドレスを買いました。\n"
-        "新しいドレスを買いましょう。\n"
-        "新しいドレスを買いましょうか。\n"
-        "ドレスはかわいくておしゃれです。\n\n"
-        
-        "Include some longer, descriptive sentences containing linking words like とき, ので, けど, だけ, for example:\n\n"
-
-        "小学生のとき、ピアノを習いました。\n"
-        "近いので、公園に行きましょう。\n"
-        "日本語はむずかしいけど、おもしろいです。\n"
-        "お茶だけはおいしかったです。\n\n"
-        
-        "You can also include negations by using such forms as じゃない, じゃなかった, ありません, いません. Some examples:\n\n"
-
-        "きれいなタオルはありませんでした。\n"
-        "かれはしんせつじゃなかったです。\n"
-        "お茶はあたたかくないです。\n"
-        "行きたくないです。\n"
-        "学校にいきたくなかったです。\n\n"
-        
-        "The text must contain from 200 to 500 words, be cohesive and tell an engaging story."
-
-        "Your response must only contain the text you write, nothing more."
-    )
-
-    completion = client.chat.completions.create(
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
-        model="sonar",
-        response_format={
-            "type": "json_schema",
-            "json_schema": {
-                "schema": {
-                    "type": "object",
-                    "properties": {
-                        "text": {
-                            "type": "string",
-                        }
-                    },
-                    "required": ["text"]
-                }
-            }
+    messages = [
+        {
+            "role": "system",
+            "content": make_text_system_message(topic),
+        },
+        {
+            "role": "user",
+            "content": topic
         }
-    )
+    ]
 
-    try:
-        text = json.loads(completion.choices[0].message.content)["text"]
-    except KeyError:
-        raise GenerationError("Failed to generate a text.")
-    except json.decoder.JSONDecodeError:
-        with open("perplexity.log", "a") as log_f:
-            log_f.write(f"Failed to generate a text for topic: {topic!r}\n")
-            log_f.write(f"{completion.choices[0].message.content}\n\n")
-    else:
-        print(text)
-        return text
+    response = model.invoke([
+        ("system", messages[0]["content"]),
+        ("user", messages[1]["content"].format(topic=topic, sentences="\n".join(vocabulary_sentences)))
+    ])
+
+    text = response.choices[0].message.content
+    with open(f"../../logs/{model_name}-text.log", "a") as log_f:
+        log_f.write(f"Response for topic:\n\n{topic}\n\n")
+        log_f.write(f"{response}\n\n")
+
+    return text
+
+
+def generate_questions(text: str, model_name: Model = Model.GEMMA_JPN) -> list[str]:
+    if not text:
+        raise ValueError("Text must be provided.")
+
+    print("Text:\n", text)
+
+    model = ChatOllama(model=model_name, validate_model_on_init=True)
+
+    messages = [
+        {
+            "role": "system",
+            "content": make_questions_system_message(),
+        },
+        {
+            "role": "user",
+            "content": text
+        }
+    ]
+
+    response = model.invoke([
+        ("system", messages[0]["content"]),
+        ("user", messages[1]["content"].format(text=text))
+    ])
+
+    questions = response.choices[0].message.content
+    with open(f"../../logs/{model_name}-questions.log", "a") as log_f:
+        log_f.write(f"Response for text:\n\n{text}\n\n")
+        log_f.write(f"{response}\n\n")
+
+    return questions
