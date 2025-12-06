@@ -3,3 +3,7 @@
 
 # Logs
 /logs
+
+# Chroma vector database
+chroma_*
+
