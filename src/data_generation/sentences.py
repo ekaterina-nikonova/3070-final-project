@@ -16,14 +16,14 @@ CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
 def generate():
     vocabulary_words = list(vocabulary_dict.keys())
 
-    generated_sentences_filepath = Path(__file__.rsplit("/", 1)[0]) / "generated_sentences_unique.txt"
+    generated_sentences_filepath = CURRENT_MODULE_DIRPATH / "generated_sentences_unique.txt"
     generated_sentences_str = generated_sentences_filepath.read_text()
 
     entries = find_missing_words(generated_sentences_str, vocabulary_words)
 
     client = Perplexity()  # Automatically uses PERPLEXITY_API_KEY
     for i, entry in enumerate(entries):
-        # From the vector store, fetch the 100 most similar words to the entry to use as a vocabulary.
+        # From the vector store, fetch the 100 most similar words to the entry to use as vocabulary.
         vocabulary_words = fetch_similar_entries(entry, results_num=100)
         vocabulary_str = "\n".join(vocabulary_words)
 
@@ -94,12 +94,12 @@ def generate():
         except KeyError:
             sentences = []
         except json.decoder.JSONDecodeError:
-            with open("perplexity.log", "a") as log_f:
+            with open("../../logs/perplexity.log", "a") as log_f:
                 log_f.write(f"Failed response for entry {entry}\n\n")
                 log_f.write(f"{completion.choices[0].message.content}\n\n")
             continue
         else:
-            with open("perplexity.log", "a") as log_f:
+            with open("../../logs/perplexity.log", "a") as log_f:
                 log_f.write(f"Response for entry {entry}\n\n")
                 log_f.write(f"{completion.choices[0].message.content}\n\n")
 
