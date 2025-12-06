@@ -1,4 +1,4 @@
-from data_generation.vocabulary import vocabulary_dict
+from content_generation.vocabulary import vocabulary_dict
 from retrieval.embedding import fetch_similar_entries
 
 

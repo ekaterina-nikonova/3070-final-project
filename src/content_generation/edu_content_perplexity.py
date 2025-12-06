@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from huggingface_hub.errors import GenerationError
 from perplexity import Perplexity
 
-from data_generation.prompt_utilities import make_text_system_message, make_questions_system_message
+from content_generation.prompt_utilities import make_text_system_message, make_questions_system_message
 
 load_dotenv()
 

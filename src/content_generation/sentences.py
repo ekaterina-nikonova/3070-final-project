@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 from perplexity import Perplexity
 
-from data_generation.missing_words import find_missing_words
-from data_generation.vocabulary import vocabulary_dict
+from content_generation.missing_words import find_missing_words
+from content_generation.vocabulary import vocabulary_dict
 from retrieval.embedding import fetch_similar_entries, embed_sentences
 
 load_dotenv()
