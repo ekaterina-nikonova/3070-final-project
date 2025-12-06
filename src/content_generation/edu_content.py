@@ -61,12 +61,11 @@ def generate_text(
         ("user", messages[1]["content"].format(topic=topic, sentences="\n".join(vocabulary_sentences)))
     ])
 
-    text = response.choices[0].message.content
     with open(log_filepath, "a") as log_f:
         log_f.write(f"Response for topic:\n\n{topic}\n\n")
         log_f.write(f"{response}\n\n")
 
-    return text
+    return response.content
 
 
 def generate_questions(
@@ -94,8 +93,6 @@ def generate_questions(
     if log_filepath is None:
         log_filepath = f"../../logs/{model_name}-questions.log"
 
-    print("Text:\n", text)
-
     model = ChatOllama(model=model_name, validate_model_on_init=True)
 
     messages = [
@@ -114,9 +111,8 @@ def generate_questions(
         ("user", messages[1]["content"].format(text=text))
     ])
 
-    questions = response.choices[0].message.content
     with open(log_filepath, "a") as log_f:
         log_f.write(f"Response for text:\n\n{text}\n\n")
         log_f.write(f"{response}\n\n")
 
-    return questions
+    return response.content
