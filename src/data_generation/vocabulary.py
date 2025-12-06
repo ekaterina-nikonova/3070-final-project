@@ -940,7 +940,7 @@ vocabulary = """
     じこ;accident
     とまります;stay, will stay, stops
     電車;trains, train
-    八分;eight minutes, eighteen minutes
+    八分;eight minutes
     もち;mochi, hold, rice cake
     今週;this week
     花見;flower-viewing, see the cherry blossoms, cherry blossom viewing
@@ -969,17 +969,17 @@ vocabulary = """
     パンや;bakery
     おくれます;will be late
     たち;and the others
-    三分;minutes
     いません;is (not), not, (is) not (there)
     私たち;we, us
     メッセージをおくります;send a message
     中;in the middle, in the process of, while
-    六分;minutes
+    六分;six minutes
     おそい;slow, late
     アレックス;Alex
     つきます;will arrive, going to arrive
     今から;now, just now
-    一分;minute
+    三分;three minutes
+    一分;one minute
     乗ります;ride, take
     でます;leave, am leaving, exit
     しんじゅく;Shinjuku
@@ -1691,7 +1691,7 @@ vocabulary = """
     ぐらい;about
     かかります;take, (it) takes, (it) will take
     はやい;fast
-    十分;sufficient, enough, adequate
+    十分;ten minutes
     どの;any, each, which
     もうすぐ;soon, almost, shortly
     あさくさ;Asakusa
@@ -2052,3 +2052,24 @@ vocabulary_list_stripped = [e.strip() for e in vocabulary_list_split]
 vocabulary_list = [e.split(";") for e in vocabulary_list_stripped]
 
 vocabulary_dict = {jap: eng  for jap, eng in vocabulary_list}
+
+
+default_topic = "友だちが来ました。"
+default_text = (
+    "昨日、私はうえので友だちに会いました。友だちはとても笑顔で、久しぶりに会えてうれしかったです。"
+    "友だちが来るのは久しぶりだったので、れつにすわって、ゆっくり話しました。"
+    "友だちはえんげきがとくいで、最近のえんげきの話をたくさんしました。私たちはもりで遊んだり、"
+    "いけぶくろであそんだことも思い出して話しました。おなじクラスの友だちとも話して、とても楽しかったです。"
+    "友だちとやっと会えて、元気になりました。明日はまたべつの友だちと会う予定です。"
+    "友だちがいますから、毎日が楽しいです。"
+)
+default_questions = [
+    "昨日どこで友だちに会いましたか？"
+    "友だちとどんな話をしましたか？"
+    "明日は何をする予定ですか？"
+]
+default_answers = [
+    "昨日、友達にうえので会いました。"
+    "友達と最近のえんげきの話をしました。"
+    "あしたはべつの友達に会いたいです。"
+]
