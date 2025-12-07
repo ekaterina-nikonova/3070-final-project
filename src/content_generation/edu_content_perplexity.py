@@ -48,11 +48,11 @@ def generate_text(topic: str):
     except KeyError:
         raise GenerationError("Failed to generate a text.")
     except json.decoder.JSONDecodeError:
-        with open("../../logs/perplexity.log", "a") as log_f:
+        with open("../../logs/perplexity/perplexity.log", "a") as log_f:
             log_f.write(f"Failed to generate a text for topic: {topic!r}\n")
             log_f.write(f"{completion}\n\n")
     else:
-        with open("../../logs/perplexity.log", "a") as log_f:
+        with open("../../logs/perplexity/perplexity.log", "a") as log_f:
             log_f.write(f"Generated a text for topic: {topic!r}\n")
             log_f.write(f"{completion}\n\n")
         return text
@@ -101,11 +101,11 @@ def generate_questions(text: str) -> list[str]:
     except KeyError:
         raise GenerationError("Failed to generate questions.")
     except json.decoder.JSONDecodeError:
-        with open("../../logs/perplexity.log", "a") as log_f:
+        with open("../../logs/perplexity/perplexity.log", "a") as log_f:
             log_f.write(f"Failed to generate questions.\n")
             log_f.write(f"{completion}\n\n")
     else:
-        with open("../../logs/perplexity.log", "a") as log_f:
+        with open("../../logs/perplexity/perplexity.log", "a") as log_f:
             log_f.write(f"Generated questions for text:\n\n{text}\n\n")
             log_f.write(f"{completion}\n\n")
     return questions

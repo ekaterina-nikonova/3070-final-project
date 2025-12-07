@@ -94,12 +94,12 @@ def generate():
         except KeyError:
             sentences = []
         except json.decoder.JSONDecodeError:
-            with open("../../logs/perplexity.log", "a") as log_f:
+            with open("../../logs/perplexity/perplexity.log", "a") as log_f:
                 log_f.write(f"Failed response for entry {entry}\n\n")
                 log_f.write(f"{completion.choices[0].message.content}\n\n")
             continue
         else:
-            with open("../../logs/perplexity.log", "a") as log_f:
+            with open("../../logs/perplexity/perplexity.log", "a") as log_f:
                 log_f.write(f"Response for entry {entry}\n\n")
                 log_f.write(f"{completion.choices[0].message.content}\n\n")
 
