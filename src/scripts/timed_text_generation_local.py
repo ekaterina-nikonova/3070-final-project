@@ -13,7 +13,7 @@ def format_duration(seconds: float) -> str:
 
 
 for model in Model:
-    log_filepath = f"../../logs/{model.value}-text.log"
+    log_filepath = f"../../logs/{model.value.replace('/', '-').replace(':', '-')}-text.log"
     start = time.perf_counter()
     generate_text(default_topic, model, log_filepath)
     elapsed = time.perf_counter() - start

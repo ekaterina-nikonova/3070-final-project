@@ -4,7 +4,12 @@ from typing import Optional
 from dotenv import load_dotenv
 from langchain_ollama import ChatOllama
 
-from content_generation.prompt_utilities import make_text_system_message, make_questions_system_message
+from content_generation.prompt_utilities import (
+    make_text_system_message_short,
+    make_text_user_message_short,
+    make_questions_system_message_short,
+    make_questions_user_message_short,
+)
 from retrieval.embedding import fetch_similar_entries
 
 load_dotenv()
@@ -39,7 +44,7 @@ def generate_text(
         raise ValueError("Topic must be specified.")
 
     if log_filepath is None:
-        log_filepath = f"../../logs/{model_name}-text.log"
+        log_filepath = f"../../logs/{model_name.value.replace('/', '-').replace(':', '-')}-text.log"
 
     model = ChatOllama(model=model_name, validate_model_on_init=True)
 
@@ -48,11 +53,11 @@ def generate_text(
     messages = [
         {
             "role": "system",
-            "content": make_text_system_message(topic),
+            "content": make_text_system_message_short(topic),
         },
         {
             "role": "user",
-            "content": topic
+            "content": make_text_user_message_short(topic)
         }
     ]
 
@@ -91,18 +96,18 @@ def generate_questions(
         raise ValueError("Text must be provided.")
 
     if log_filepath is None:
-        log_filepath = f"../../logs/{model_name}-questions.log"
+        log_filepath = f"../../logs/{model_name.value.replace('/', '-').replace(':', '-')}-questions.log"
 
     model = ChatOllama(model=model_name, validate_model_on_init=True)
 
     messages = [
         {
             "role": "system",
-            "content": make_questions_system_message(),
+            "content": make_questions_system_message_short(),
         },
         {
             "role": "user",
-            "content": text
+            "content": make_questions_user_message_short(text)
         }
     ]
 
