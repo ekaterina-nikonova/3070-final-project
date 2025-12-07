@@ -2,8 +2,77 @@ from content_generation.vocabulary import vocabulary_dict
 from retrieval.embedding import fetch_similar_entries
 
 
+def make_text_system_message_short(topic: str) -> str:
+    """A simple system message suitable for small models that are invoked locally."""
+    vocabulary_words = fetch_similar_entries(topic, results_num=10, fetch_sentences=True)
+    vocabulary_str = "\n".join(vocabulary_words)
+
+    return (
+        "You are a Japanese teacher creating reading material for JLPT N5 (beginner) students.\n"
+        "The user will provide a topic, and you have to write a short story on that topic.\n\n"
+        
+        "Instructions:\n\n"
+        "- Write a story between 100 and 200 characters long.\n"
+        "- Use simple grammar.\n"
+        "- Try to include these specific phrases naturally:\n\n"
+        
+        f"{vocabulary_str}\n\n"
+        
+        "### EXAMPLE:\n\n"
+        "User:\n"
+        "Topic: 週末\n\n"
+        "Assistant:\n"
+        "私は土曜日に映画を見ました。アクション映画でした。とても楽しかったです。日曜日は家で本を読みました。いい週末でした。\n"
+    )
+
+
+def make_text_user_message_short(topic: str) -> str:
+    """A simple user message suitable for small models that are invoked locally."""
+    return (
+        f"Write a story about this topic: {topic}\n\n"
+        "Remember to use simple grammar and keep it under 200 characters."
+    )
+
+
+def make_questions_system_message_short() -> str:
+    """A simple system message suitable for small models that are invoked locally."""
+    return (
+        "You are a Japanese teacher.\n\n"
+        
+        "Task: Read the text provided by the user and write 3 simple comprehension questions in Japanese.\n\n"
+        
+        "Constraints:\n"
+        "- The questions must be easy to answer using the text provided.\n"
+        "- Use the same vocabulary found in the text.\n"
+        "- Do not use complex Kanji.\n"
+        
+        "Examples:\n\n"
+        "User Text: 私は昨日、公園へ行きました。\n"
+        "Question: 昨日はどこへ行きましたか？\n\n"
+        
+        "User Text: 朝ごはんはパンを食べました。\n"
+        "Question: 朝ごはんに何を食べましたか？\n\n"
+        
+        "### GUIDELINES:\n\n"
+        "1. Read the text carefully.\n"
+        "2. Create 3 questions in Japanese that can be answered directly from the text.\n"
+        "3. Use simple vocabulary (A1/N5 level).\n"
+        "4. Do NOT provide the answers.\n"
+        "5. Output ONLY a numbered list."
+    )
+
+
+def make_questions_user_message_short(text: str) -> str:
+    """A simple user message suitable for small models that are invoked locally."""
+    return (
+        "Here is a text for a student:\n\n"
+        f"{text}\n\n"
+        "Please generate 3 questions based on the text above."
+    )
+
+
 def make_text_system_message(topic: str) -> str:
-    # From the vector store, fetch 20 sentences related to the topic to use as vocabulary.
+    # From the vector store, fetch 50 sentences related to the topic to use as vocabulary.
     vocabulary_words = fetch_similar_entries(topic, results_num=50, fetch_sentences=True)
     vocabulary_str = "\n".join(vocabulary_words)
 
