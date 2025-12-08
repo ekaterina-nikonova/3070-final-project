@@ -1,0 +1,1 @@
+"""Process handwritten and spoken answers by converting them to text."""
