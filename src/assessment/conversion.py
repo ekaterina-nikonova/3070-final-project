@@ -1,10 +1,15 @@
 import subprocess
 from pathlib import Path
 
+
+CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
+ANSWER_PROCESSING_DIRPATH = CURRENT_MODULE_DIRPATH.parent / "answer_processing"
+
+
 def image_to_text(
     image_path: str,
-    ocr_python: str = "../answer_processing/.venv/bin/python",
-    ocr_runnable: str = "../answer_processing/ocr.py",
+    ocr_python: str = ANSWER_PROCESSING_DIRPATH / ".venv/bin/python",
+    ocr_runnable: str = ANSWER_PROCESSING_DIRPATH / "ocr.py",
     timeout: int = 60,
 ) -> str:
     """Run the ocr.py module from the answer_processing package with its own Python and return the text it prints to stdout.
@@ -29,8 +34,8 @@ def image_to_text(
 
 def audio_to_text(
     image_path: str,
-    asr_python: str = "../answer_processing/.venv/bin/python",
-    asr_runnable: str = "../answer_processing/asr.py",
+    asr_python: str = ANSWER_PROCESSING_DIRPATH / ".venv/bin/python",
+    asr_runnable: str = ANSWER_PROCESSING_DIRPATH / "asr.py",
     timeout: int = 60,
 ) -> str:
     """Run the asr.py module from the answer_processing package with its own Python and return the text it prints to stdout.
