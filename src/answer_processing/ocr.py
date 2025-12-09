@@ -16,7 +16,7 @@ def convert_to_text(image_filepath: str):
     generated_ids = model.generate(pixel_values)
 
     generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
-    return generated_text
+    return ''.join(generated_text.split())  # characters may be separated with whitespaces
 
 
 if __name__ == "__main__":
