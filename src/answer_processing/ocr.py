@@ -1,35 +1,26 @@
-import subprocess
 import sys
-from pathlib import Path
 
-def invoke_convert_to_text(
-    image_path: str,
-    ocr_python: str = "../3070-final-project-ocr/.venv/bin/python",
-    ocr_main: str = "../3070-final-project-ocr/main.py",
-    timeout: int = 60,
-) -> str:
-    """Run the main.py module from OCR with its own Python and return the text it prints to stdout.
-    """
-    other_main_path = Path(ocr_main)
-    if not other_main_path.exists():
-        raise FileNotFoundError(f"`{ocr_main}` not found")
+from transformers import TrOCRProcessor, VisionEncoderDecoderModel
+from PIL import Image
 
-    proc = subprocess.run(
-        [ocr_python, str(other_main_path), image_path],
-        capture_output=True,
-        text=True,
-        timeout=timeout,
-        check=False,
-    )
+OCR_MODEL_NAME = "jzhang533/manga-ocr-base-2025"
 
-    if proc.returncode != 0:
-        raise RuntimeError(f"The OCR process failed ({proc.returncode}):\n{proc.stderr.strip()}")
 
-    return proc.stdout.strip()
+def convert_to_text(image_filepath: str):
+    processor = TrOCRProcessor.from_pretrained(OCR_MODEL_NAME)
+    model = VisionEncoderDecoderModel.from_pretrained(OCR_MODEL_NAME)
+
+    image = Image.open(image_filepath).convert("RGB")
+
+    pixel_values = processor(image, return_tensors="pt").pixel_values
+    generated_ids = model.generate(pixel_values)
+
+    generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    return generated_text
 
 
 if __name__ == "__main__":
     image_filepath_arg = sys.argv[1] if len(sys.argv) > 1 else ""
     if not image_filepath_arg:
         raise ValueError("Please provide an image filepath as an argument.")
-    print(invoke_convert_to_text(image_filepath_arg))
+    print(convert_to_text(image_filepath_arg))
