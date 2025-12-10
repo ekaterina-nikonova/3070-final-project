@@ -13,7 +13,7 @@ from langchain_huggingface import HuggingFaceEndpointEmbeddings
 EMBEDDING_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
-DATA_DIRPATH = CURRENT_MODULE_DIRPATH.parent / "data"
+DATA_DIRPATH = CURRENT_MODULE_DIRPATH.parent.parent / "data"
 DEFAULT_WORDS_DB_DIRPATH = DATA_DIRPATH / "chroma_langchain_db_words"
 DEFAULT_WORDS_WITH_TRANSLATIONS_DB_DIRPATH = DATA_DIRPATH / "chroma_langchain_db_words_with_translations"
 DEFAULT_SENTENCES_DB_DIRPATH = DATA_DIRPATH / "chroma_langchain_db_sentences"
