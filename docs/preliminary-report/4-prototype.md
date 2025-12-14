@@ -28,7 +28,7 @@ The image below shows the state of the application after the submission of respo
 
 <img src="cli-feedback.png"  alt="App running in the terminal"/>
 
-This multidimensional feedback mechanism corresponds to the principles of formative assessment in language learning, where immediate, specific feedback on multiple linguistic dimensions supports skill development [[Black & William, 1998; Nicol & Macfarlane, 2006]].
+This multidimensional feedback mechanism corresponds to the principles of formative assessment in language learning, where immediate, specific feedback on multiple linguistic dimensions supports skill development [Black & William, 1998; Nicol & Macfarlane, 2006].
 
 ***
 
@@ -41,7 +41,7 @@ The generated text and accompanying questions are not consistently restricted to
 The current implementation relies on semantic retrieval from the vector store to construct the prompt but does not enforce hard constraints on the LLM's output vocabulary. The model may generate plausible alternatives or morphological variations, such as verb conjugations or particles, that were not explicitly retrieved, treating these as semantically equivalent to the restricted vocabulary.
 
 Plain validation via vocabulary look-up is challenging when applied to Japanese language, because Japanese text lacks whitespace delimiters, making detecting unknown words written in hiragana substantially more difficult. Unlike English or even kanji-heavy text, pure hiragana sequences provide no intrinsic morphological boundaries.
-Instead, after generation the output can be processed with a comprehensive kanji dictionary, such as the KANJIDIC2 database used in NLP systems, to identify any kanji that are not in the learner's approved list. These characters can be flagged and the generation request rejected, requiring the LLM to regenerate the content using only approved kanji. Alternatively, a template-based lexically constrained text generation approach [[Iso et al., 2022]] can be used.
+Instead, after generation the output can be processed with a comprehensive kanji dictionary, such as the KANJIDIC2 database used in NLP systems, to identify any kanji that are not in the learner's approved list. These characters can be flagged and the generation request rejected, requiring the LLM to regenerate the content using only approved kanji. Alternatively, a template-based lexically constrained text generation approach [Iso et al., 2022] can be used.
 
 Another potential solution is to leverage Japanese morphological analysers such as MeCab (with an appropriate dictionary like NEologd) or JUMAN++ which can segment the hiragana text and identify word boundaries. The identified words can then be checked against the approved vocabulary list. However, these tools have known limitations: they may struggle with rare words or non-standard usage common in learner-produced or AI-generated text.
 
@@ -50,7 +50,7 @@ Another potential solution is to leverage Japanese morphological analysers such 
 
 The prototype relies on the Perplexity Sonar model accessed via API. This introduces latency, dependency on external service availability, and ongoing API costs, limiting the system's applicability in offline or resource-constrained educational settings.
 
-Recent developments in open-source, small-scale LLMs optimised for Japanese [[SiliconFlow]] make local deployment increasingly viable. However, our initial findings indicate that while smaller models (7–14B parameters) can produce grammatically acceptable Japanese, they often:
+Recent developments in open-source, small-scale LLMs optimised for Japanese [SiliconFlow, 2025] make local deployment increasingly viable. However, our initial findings indicate that while smaller models (7–14B parameters) can produce grammatically acceptable Japanese, they often:
 
 - struggle with fine-grained vocabulary control when prompted with a vocabulary list that exceeds their context window,
 - occasionally introduce hallucinations or semantically incoherent content,
@@ -109,15 +109,3 @@ The prototype successfully demonstrates the feasibility of an integrated system 
 4. **User experience.** A GUI that handles capture, format conversion, and file management will significantly improve usability for real-world deployment.
 
 These improvements may contribute to positioning the system as a technically sound and pedagogically grounded contribution to the field.
-
-***
-
-### References
-
-Black, P., & Wiliam, D. (1998). Assessment and classroom learning. *Assessment in Education: Principles, Policy & Practice*, 5(1), 7–74.
-
-Iso, H., et al. (2022). A simple recipe for lexically constrained text generation. *Transactions of the Association for Computational Linguistics*, 10, 815–832.
-
-Nicol, D., & Macfarlane-Dick, D. (2006). Formative assessment and self-regulated learning: A model and seven principles of good feedback practice. *Studies in Higher Education*, 31(2), 199–218.
-
-SiliconFlow. (2025). *The best open source LLM for Japanese in 2025*. Retrieved from https://www.siliconflow.com/articles/en/best-open-source-LLM-for-Japanese
