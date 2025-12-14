@@ -102,7 +102,7 @@ The prototype successfully demonstrates the feasibility of an integrated system 
 
 1. **Vocabulary control.** Implementing a feedback loop with the detection of lexical units not present in the vocabulary can reduce constraint leakage while maintaining generation fluency.
 
-2. **Local LLM integration.** Continued monitoring of small-scale, Japanese-specialized LLMs, combined with prompt engineering techniques, offers a path toward offline deployment without significant quality compromise.
+2. **Local LLM integration.** Continued monitoring of small-scale, Japanese-specialised LLMs, combined with prompt engineering techniques, offers a path toward offline deployment without significant quality compromise.
 
 3. **OCR/ASR enhancement.** Confidence-based filtering can improve transcription accuracy while reducing false positives in error detection.
 
