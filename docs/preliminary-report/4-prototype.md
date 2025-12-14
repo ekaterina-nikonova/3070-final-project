@@ -24,6 +24,10 @@ This dual-modality approach reflects the reality of language learning assessment
 
 The two transcriptions are compared, and the system verifies that they have identical content. They are then fed to an LLM, again via Perplexity's API, to perform detailed assessment along four dimensions: semantic, grammatical, orthographic, and phonetic.
 
+The image below shows the state of the application after the submission of responses for two questions. It demonstrates both the user input in the form of file paths to the handwritten answer image and audio recording, and the response from the LLM evaluator containing multi-modal feedback.
+
+<img src="cli-feedback.png"  alt="App running in the terminal"/>
+
 This multidimensional feedback mechanism corresponds to the principles of formative assessment in language learning, where immediate, specific feedback on multiple linguistic dimensions supports skill development [[Black & William, 1998; Nicol & Macfarlane, 2006]].
 
 ***
