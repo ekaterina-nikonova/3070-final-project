@@ -53,10 +53,35 @@ Requiring a learner-specified vocabulary list ensures curriculum alignment and m
 
 ### 3.5. Work plan
 
-<- TBD ->
+The image below shows a timeline of the project's development:
+
+<img src="work-plan.png" alt="A timeline showing the work plan" />
+
+#### 3.5.1. Completed stages
+
+After selecting the template, the work started with compiling the **vocabulary dataset**. Because of copyright restrictions linked with most existing Japanese language materials available commercially, it was decided to use generated sentences to populate the vector store for further retrieval. After many unsuccessful attempts to generate sentences from a pre-defined list of words and phrases using a local model, the project switched to using a remote model. As a result, an algorithm was created to repeatedly invoke the Perplexity Sonar model via an API with a subsection of the vocabulary for each entry. The resulting dataset consists of 7833 unique Japanese sentences, making sure that each entry in the vocabulary list is represented at least once.
+
+The **RAG** pipeline was created simultaneously with the dataset preparation, and its word-retrieval component was used during the sentence generation stage.
+
+A number of **OCR and ASR models** were tested and selected for use in the prototype. *Manga OCR* was selected for its ability to process multiline text, whereas alternatives such as *PaddleOCR* were considered but rejected due to their poor performance on images of non-standard sizes. *wav2vec2* was selected as an ASR model for its high accuracy and convenience of deployment.
+
+Simultaneously, the **Background research and positioning** were carried out to identify potential use cases and existing solutions, as a preparation for the **Project pitch** delivery.
+
+After the **RAG** stage was completed, the work started on combining the elements of the project, previously developed separately, into a single **Prototype** application. This required the utilisation of the *uv* library for managing Python environments, since different components of the application required different versions of Python and its libraries, such as `numpy`.
+
+The **Content generation (local)** assumed generating text and comprehension question using a local LLM model, but the experiments with small models with 270M-4B parameters showed that the quality of the generated text was not satisfactory. Therefore, the work proceeded with the Perplexity Sonar model via API.
+
+The present **Preliminary report** describes the project and concludes the first phase of the project's development.
+
+#### 3.5.2. Planned stages
+
+Further work will involve ensuring **Vocabulary constraints** either via prompt engineering, template-based approach, or result filtering via a feedback loop. **Alternatives to OCR and ASR** models will be evaluated to verify if increased accuracy is possible with a different model. Another attempt to use a **local LLM** for text generation will be made, with the fallback option of using the remote model, like in the presented prototype, if the quality or the performance of local models are not satisfactory.
+
+In parallel with the aforementioned improvements, work on the **Web or mobile UI** will be carried out, as the changes in the application's components will not require alterations in the user workflow or the data flow in the system. The evaluation and testing will be performed iteratively at every stage, ensuring there is no regression in the system's functionality.
+
+The **Final report** will be prepared in parallel with the development of the application.
 
 ### 3.6. Evaluation plan
-
 
 This testing and evaluation plan defines measurable objectives, the methods to verify them, anticipated failure modes with mitigations, and the criteria that constitute project success.
 
