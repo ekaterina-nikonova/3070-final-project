@@ -4,11 +4,11 @@
 
 The **AI-Powered Japanese Language Exercise System with Multimodal Feedback** is based on *Template: CM3020 Artificial Intelligence. Project Idea 1: Orchestrating AI models to achieve a goal*. It is an intelligent tutoring system designed to support Japanese language learners in consolidating and improving their skills in four key competencies: written accuracy, pronunciation, handwriting, and comprehension. Rather than introducing new vocabulary or grammatical structures, the system functions as a retention and fluency training aid that operates on learner-curated vocabulary obtained from other resources.
 
-The system employs orchestration of pre-trained models including Large Language Models (LLMs), Automatic Speech Recognition (ASR), Optical Character Recognition (OCR), and semantic vector embeddings to provide comprehensive, multimodal feedback across handwritten responses, spoken answers, and written assessments. With the help of Retrieval-Augmented Generation (RAG), the system generates contextually coherent exercises utilising the learner's established vocabulary inventory.
+The system employs orchestration of pre-trained models including semantic vector embeddings, Large Language Models (LLMs), Automatic Speech Recognition (ASR), and Optical Character Recognition (OCR). It provides actionable feedback across handwritten responses, spoken answers, and comprehension activities. With the help of Retrieval-Augmented Generation (RAG), the system generates contextually coherent exercises utilising the learner's established lexical and grammatical inventory.
 
 ### 3.2. Domain and users
 
-The system focuses on the acquisition of Japanese as a foreign Language. Its pedagogical aim is to enhance retention and communicative proficiency rather than facilitate initial vocabulary acquisition. The project's instructional goals prioritise fluency through repeated practice, accuracy via multimodal feedback, and explicit handwriting skill development that complements typing-based practice.
+The system focuses on the acquisition of Japanese as a foreign language. Its pedagogical aim is to enhance retention and communicative proficiency rather than facilitate initial vocabulary acquisition. The project's instructional goals prioritise fluency through repeated practice, accuracy via multimodal feedback, and explicit handwriting skill development that complements typing-based practice acquired through other types of instruction.
 
 Primary users are beginner-to-intermediate Japanese learners who already possess foundational knowledge and need structured practice to consolidate material. The system also targets self-directed adult learners and students using classroom materials who want supplementary practice outside formal instruction. Secondary users include language teachers who will use the system for formative assessment and curriculum designers or institutions seeking to augment courseware with aligned practice tools.
 
@@ -16,7 +16,7 @@ Learners require immediate, actionable feedback across spoken, typed, and handwr
 
 ### 3.3. System architecture
 
-The system workflow consists of several interconnected components. First, a large language model (LLM) generates sentences from a pre-defined vocabulary list representing the learner's current knowledge base. These sentences are embedded in a vector database to enable semantic retrieval. This operation is performed once for a target vocabulary.
+The system workflow consists of several interconnected components. First, a large language model generates sentences from a pre-defined vocabulary list representing the learner's current knowledge base. These sentences are embedded in a vector database to enable semantic retrieval. This operation is performed once for target vocabulary.
 
 When a learner specifies a topic of interest, the system employs Retrieval-Augmented Generation (RAG) to construct coherent texts using only familiar linguistic elements. Simultaneously, comprehension questions are generated to assess understanding.
 
@@ -24,10 +24,10 @@ The system's defining characteristic emerges in its multimodal assessment approa
 
 The feedback is comprehensive, addressing four dimensions:
 
-- **semantic correctness** (Does the answer address the question appropriately?),
-- **grammatical accuracy** (Is the Japanese grammatically sound?), 
-- **handwriting quality** (Are there character recognition errors indicating poor stroke order or form?), 
-- **pronunciation accuracy** (Does the spoken output match phonemic expectations?).
+- **semantic correctness** — "Does the answer address the question appropriately?"
+- **grammatical accuracy** — "Is the language used in the response grammatically correct?" 
+- **handwriting quality** — ""Are there character recognition errors indicating poor stroke order or form?" 
+- **pronunciation accuracy** — "Does the spoken output match phonemic expectations?"
 
 The system's architecture is illustrated below:
 
@@ -43,7 +43,7 @@ The design emphasises comprehensible input: exercises are constrained to the lea
 
 RAG over a vector database is an efficient way to limit the context passed to the text-generating LLM, to ground the outputs in the learner's vocabulary, preventing vocabulary leakage.
 
-The solution orchestrates specialised models (LLM, ASR, OCR, embeddings) so each modality is handled by the best-suited model. Even though modern state-of-the-art LLMs are capable of both speech recognition and handwriting OCR, they cannot be hosted on consumer-grade hardware. Moreover, the cost of using a commercial solution for any other inputs than text may be prohibitive for many users. 
+The solution orchestrates specialised models (LLM, ASR, OCR, embeddings) so each modality is handled by the best-suited model. Even though modern state-of-the-art LLMs are capable of both speech recognition and handwriting OCR, they cannot be hosted on consumer-grade hardware. Moreover, the cost of using a commercial solution for any other inputs than text may be prohibitive for many users.
 
 The system adds multimodal consistency checks to separate input-processing errors from linguistic errors and employs LLMs as rubric-based judges for structured, consistent evaluation.
 
@@ -67,9 +67,9 @@ A number of **OCR and ASR models** were tested and selected for use in the proto
 
 Simultaneously, the **Background research and positioning** were carried out to identify potential use cases and existing solutions, as a preparation for the **Project pitch** delivery.
 
-After the **RAG** stage was completed, the work started on combining the elements of the project, previously developed separately, into a single **Prototype** application. This required the utilisation of the *uv* library for managing Python environments, since different components of the application required different versions of Python and its libraries, such as `numpy`.
+After the **RAG** stage was completed, the work started on combining the elements of the project, previously developed separately, into a single **Prototype** application. This required the utilisation of the *uv* library for managing Python environments, since different components of the application required different versions of Python and data-processing libraries, such as *numpy*.
 
-The **Content generation (local)** assumed generating text and comprehension question using a local LLM model, but the experiments with small models with 270M-4B parameters showed that the quality of the generated text was not satisfactory. Therefore, the work proceeded with the Perplexity Sonar model via API.
+The **Content generation (local)** stage assumed generating text and comprehension questions using a local LLM model, but the experiments with small models with 270M-4B parameters showed that the quality of the generated text was not satisfactory. Therefore, the work proceeded with the Perplexity Sonar model via API.
 
 The present **Preliminary report** describes the project and concludes the first phase of the project's development.
 
@@ -89,7 +89,7 @@ This testing and evaluation plan defines measurable objectives, the methods to v
 
 The evaluation goals focus on measurable performance across modalities, exercise and feedback quality, learning outcomes, usability, and reliability, specifically:
 
-- modal processing accuracy aims for average ASR and OCR confidence consistent with reliable conversion (ASR and OCR correctly convert learner inputs with >85% confidence on average);
+- response processing accuracy aims for average ASR and OCR confidence consistent with reliable conversion: learner inputs must be correctly converted with >85% confidence on average;
 - exercise generation should maintain semantic coherence and strict vocabulary compliance;
 - feedback should correctly identify errors at a high rate;
 - learners should show measurable improvements in retention after sustained use;
