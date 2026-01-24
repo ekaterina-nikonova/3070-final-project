@@ -7,3 +7,6 @@
 # Chroma vector database
 chroma_*
 
+# Python cache
+__pycache__/
+*.pyc
