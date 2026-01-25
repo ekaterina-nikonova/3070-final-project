@@ -12,6 +12,11 @@ class GenerateResponse(BaseModel):
     text: str
     questions: List[str]
 
+
+class GenerateHelpResponse(BaseModel):
+    help: str
+
+
 app = FastAPI()
 
 @app.post("/generate", response_model=GenerateResponse)
@@ -26,3 +31,9 @@ async def generate(req: GenerateRequest):
 
     return GenerateResponse(text=text, questions=questions)
 
+
+# Use this endpoint to get API documentation.
+# Note that `docs` is a reserved endpoind in FastAPI used for Swagger UI.
+@app.get("/help", response_model=GenerateHelpResponse)
+async def help():
+    return GenerateHelpResponse(help="This is a Japanese Language Exercise System (JES)")
