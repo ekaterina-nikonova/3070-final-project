@@ -20,7 +20,7 @@ def convert_to_text(image_filepath: str):
 
 
 if __name__ == "__main__":
-    image_filepath_arg = sys.argv[1] if len(sys.argv) > 1 else ""
+    image_filepath_arg = sys.argv[1] if len(sys.argv) > 1 else r"C:\Users\aka-k\Studies\uol\3070-fp\3070-final-project\src\assessment\model-answers\answer-0.png"
     if not image_filepath_arg:
         raise ValueError("Please provide an image filepath as an argument.")
     print(convert_to_text(image_filepath_arg))

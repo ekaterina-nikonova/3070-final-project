@@ -12,8 +12,15 @@ def convert_to_text(audio_filepath: str):
     model = AutoModelForCTC.from_pretrained(ASR_MODEL_NAME)
     model.eval()
 
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+        model.to(device)  # Move model to the CUDA device
+        print(f"Using device: {torch.cuda.get_device_name(device)}")
+        print(f"CUDA version: {torch.version.cuda}")
+        print(f"Number of CUDA devices: {torch.cuda.device_count()}")
+
     raw_speech, sr = sf.read(audio_filepath)
-    inputs = processor(raw_speech, sampling_rate=sr, return_tensors="pt")
+    inputs = processor(raw_speech, sampling_rate=sr, return_tensors="pt").to(device)  # Move inputs to the CUDA device
     with torch.no_grad():
         logits = model(**inputs).logits
 
@@ -24,7 +31,7 @@ def convert_to_text(audio_filepath: str):
 
 
 if __name__ == "__main__":
-    image_filepath_arg = sys.argv[1] if len(sys.argv) > 1 else ""
+    image_filepath_arg = sys.argv[1] if len(sys.argv) > 1 else r"C:\Users\aka-k\Studies\uol\3070-fp\3070-final-project\src\assessment\model-answers\answer-0.wav"
     if not image_filepath_arg:
         raise ValueError("Please provide an image filepath as an argument.")
     print(convert_to_text(image_filepath_arg))

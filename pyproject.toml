@@ -1,14 +1,41 @@
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
+
+[[tool.uv.index]]
+name = "cuda130"
+url = "https://download.pytorch.org/whl/cu130"
+
+[tool.uv.sources]
+torch = { index = "cuda130" }
+torchaudio = { index = "cuda130" }
+torchvision = { index = "cuda130" }
+markupsafe = { index = "pypi" }
+
+
 [project]
 name = "3070-fp"
 version = "0.1.0"
 description = "CS BSc at UoL - Final Project"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.128.0",
-    "langchain-chroma>=1.0.0",
-    "langchain-huggingface>=1.1.0",
-    "langchain-ollama>=1.0.0",
-    "perplexityai>=0.20.1",
+    "fugashi>=1.5.2",
+    "langchain-chroma>=1.1.0",
+    "langchain-huggingface>=1.2.0",
+    "langchain-ollama>=1.0.1",
+    "markupsafe>=3.0.3",
+    "perplexityai>=0.26.0",
+    "pillow>=12.0.0",
+    "pydantic>=2.12.5",
     "python-dotenv>=1.2.1",
+    "soundfile>=0.13.1",
+    "torch>=2.10.0",
+    "torchaudio>=2.10.0",
+    "torchvision>=0.25.0",
+    "transformers>=4.57.6",
+    "unidic-lite>=1.0.8",
+    "uvicorn>=0.40.0",
 ]
