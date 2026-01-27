@@ -2054,7 +2054,7 @@ vocabulary_list = [e.split(";") for e in vocabulary_list_stripped]
 vocabulary_dict = {jap: eng  for jap, eng in vocabulary_list}
 
 
-default_topic = "友だちが来ました。"
+default_topic = "友達が来ました。"
 default_text = (
     "昨日、私はうえので友だちに会いました。友だちはとても笑顔で、久しぶりに会えてうれしかったです。"
     "友だちが来るのは久しぶりだったので、れつにすわって、ゆっくり話しました。"
