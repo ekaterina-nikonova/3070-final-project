@@ -15,11 +15,11 @@ from retrieval.embedding import fetch_similar_entries
 load_dotenv()
 
 class Model(StrEnum):
-    GEMMA3_270M = "gemma3:270m"
-    GEMMA3_1B = "gemma3:1b"
-    GEMMA_JPN = "schroneko/gemma-2-2b-jpn-it:q4_K_S"
-    DEEPSEEK_R1_8B = "deepseek-r1:8b"
-    QWEN3_4B = "qwen3:4b"
+    GEMMA3_270M = "gemma3:270m"                         # 292 MB; 32K context
+    GEMMA3_1B = "gemma3:1b"                             # 815 MB; 32K context
+    GEMMA_JPN = "schroneko/gemma-2-2b-jpn-it:q4_K_S"    # 1.6 GB; 8K context
+    DEEPSEEK_R1_8B = "deepseek-r1:8b"                   # 5.2 GB; 128K context
+    QWEN3_4B = "qwen3:4b"                               # 2.5 GB; 256K context
 
 
 def generate_text(
