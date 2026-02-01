@@ -12,6 +12,7 @@ from retrieval.embedding import fetch_similar_entries, embed_sentences
 load_dotenv()
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
+LOG_DIRPATH = CURRENT_MODULE_DIRPATH.parent.parent / "logs"
 
 def generate():
     vocabulary_words = list(vocabulary_dict.keys())
@@ -94,16 +95,16 @@ def generate():
         except KeyError:
             sentences = []
         except json.decoder.JSONDecodeError:
-            with open("../../logs/perplexity/perplexity.log", "a") as log_f:
+            with open(LOG_DIRPATH / "perplexity/perplexity.log", "a", encoding="utf-8") as log_f:
                 log_f.write(f"Failed response for entry {entry}\n\n")
                 log_f.write(f"{completion.choices[0].message.content}\n\n")
             continue
         else:
-            with open("../../logs/perplexity/perplexity.log", "a") as log_f:
+            with open(LOG_DIRPATH / "perplexity/perplexity.log", "a", encoding="utf-8") as log_f:
                 log_f.write(f"Response for entry {entry}\n\n")
                 log_f.write(f"{completion.choices[0].message.content}\n\n")
 
-        with open("generated_sentences.txt", "a") as f:
+        with open(CURRENT_MODULE_DIRPATH / "generated_sentences.txt", "a", encoding="utf-8") as f:
             for sentence in sentences:
                 f.write(f"{sentence}\n")
             f.write("\n")
@@ -117,7 +118,7 @@ def clean_generated_sentences():
     # only keep the first 10 sentences from that group.
 
     source_filepath = CURRENT_MODULE_DIRPATH / "generated_sentences.txt"
-    with open(source_filepath) as f:
+    with open(source_filepath, encoding="utf-8") as f:
         contents = f.read()
 
     cleaned_sentences = []
@@ -128,13 +129,13 @@ def clean_generated_sentences():
     unique_sentences = list(set([s.strip() for s in cleaned_sentences if s.strip()]))
 
     target_filepath = CURRENT_MODULE_DIRPATH / "generated_sentences_unique.txt"
-    with open(target_filepath, "w") as f:
+    with open(target_filepath, "w", encoding="utf-8") as f:
         for sentence in unique_sentences:
             f.write(f"{sentence}\n")
 
 
 def embed_clean_sentences():
-    with open(CURRENT_MODULE_DIRPATH / "generated_sentences_unique.txt") as f:
+    with open(CURRENT_MODULE_DIRPATH / "generated_sentences_unique.txt", encoding='utf-8') as f:
         sentences = f.read().splitlines()
     embed_sentences(sentences)
 

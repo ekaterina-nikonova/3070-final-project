@@ -1,4 +1,5 @@
 from enum import StrEnum
+from pathlib import Path
 from typing import Optional
 
 from dotenv import load_dotenv
@@ -11,6 +12,9 @@ from content_generation.prompt_utilities import (
     make_questions_user_message_short,
 )
 from retrieval.embedding import fetch_similar_entries
+
+CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
+LOG_DIRPATH = CURRENT_MODULE_DIRPATH.parent.parent / "logs"
 
 load_dotenv()
 
@@ -44,7 +48,7 @@ def generate_text(
         raise ValueError("Topic must be specified.")
 
     if log_filepath is None:
-        log_filepath = f"../../logs/{model_name.value.replace('/', '-').replace(':', '-')}-text.log"
+        log_filepath = LOG_DIRPATH / f"{model_name.value.replace('/', '-').replace(':', '-')}-text.log"
 
     model = ChatOllama(model=model_name, validate_model_on_init=True)
 
@@ -66,7 +70,7 @@ def generate_text(
         ("user", messages[1]["content"].format(topic=topic, sentences="\n".join(vocabulary_sentences)))
     ])
 
-    with open(log_filepath, "a") as log_f:
+    with open(log_filepath, "a", encoding="utf-8") as log_f:
         log_f.write(f"Response for topic:\n\n{topic}\n\n")
         log_f.write(f"{response}\n\n")
 
@@ -96,7 +100,7 @@ def generate_questions(
         raise ValueError("Text must be provided.")
 
     if log_filepath is None:
-        log_filepath = f"../../logs/{model_name.value.replace('/', '-').replace(':', '-')}-questions.log"
+        log_filepath = LOG_DIRPATH / f"{model_name.value.replace('/', '-').replace(':', '-')}-questions.log"
 
     model = ChatOllama(model=model_name, validate_model_on_init=True)
 
@@ -116,7 +120,7 @@ def generate_questions(
         ("user", messages[1]["content"].format(text=text))
     ])
 
-    with open(log_filepath, "a") as log_f:
+    with open(log_filepath, "a", encoding="utf-8") as log_f:
         log_f.write(f"Response for text:\n\n{text}\n\n")
         log_f.write(f"{response}\n\n")
 

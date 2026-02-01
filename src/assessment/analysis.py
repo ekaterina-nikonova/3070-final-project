@@ -86,12 +86,13 @@ def analyse_answers(text, question, handwritten_answer_filepath, spoken_answer_f
     except KeyError:
         raise GenerationError("Failed to generate feedback. Check the logs for more details.")
     except json.decoder.JSONDecodeError:
-        with open(LOG_DIRPATH / "perplexity/feedback.log", "a") as log_f:
-            log_f.write(f"Failed to generate feedback for answers:\nHandwritten: {handwritten_answer!r}\nSpoken: {spoken_answer!r}\n\n")
+        with open(LOG_DIRPATH / "perplexity/feedback.log", "a", encoding="utf-8") as log_f:
+            log_f.write(
+                f"Failed to generate feedback for answers:\nHandwritten: {handwritten_answer!r}\nSpoken: {spoken_answer!r}\n\n")
             log_f.write(f"{completion}\n\n")
         raise GenerationError("Failed to parse feedback JSON. Check the logs for more details.")
     else:
-        with open(LOG_DIRPATH / "perplexity/feedback.log", "a") as log_f:
+        with open(LOG_DIRPATH / "perplexity/feedback.log", "a", encoding="utf-8") as log_f:
             log_f.write(f"Generated feedback for answers:\nHandwritten: {handwritten_answer!r}\nSpoken: {spoken_answer!r}\n\n")
             log_f.write(f"{completion}\n\n")
         return feedback
