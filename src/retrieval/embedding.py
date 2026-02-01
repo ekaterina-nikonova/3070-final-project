@@ -8,7 +8,10 @@ from dotenv import load_dotenv
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_core.vectorstores import VectorStoreRetriever
-from langchain_huggingface import HuggingFaceEndpointEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings, HuggingFaceEmbeddings
+
+# from transformers import AutoModel
+
 
 EMBEDDING_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
 
@@ -82,9 +85,11 @@ def embed(
     Returns:
         The Chroma vector store containing the embedded entries.
     """
-    embedding_function = HuggingFaceEndpointEmbeddings(
-        model=EMBEDDING_MODEL_NAME,
+    # model = AutoModel.from_pretrained(EMBEDDING_MODEL_NAME)
 
+    embedding_function = HuggingFaceEmbeddings(
+        model=EMBEDDING_MODEL_NAME,
+        model_kwargs = {"trust_remote_code": True},
     )
 
     return Chroma.from_documents(
@@ -165,7 +170,7 @@ def get_vector_store_retriever(db_dirpath: Path, results_num: int) -> VectorStor
     if not os.path.exists(db_dirpath):
         raise ValueError(f"Chroma database at {db_dirpath} does not exist. You must embed entries first.")
 
-    embedding_function = HuggingFaceEndpointEmbeddings(
+    embedding_function = HuggingFaceEmbeddings(
         model=EMBEDDING_MODEL_NAME,
     )
 
