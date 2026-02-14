@@ -6,10 +6,8 @@ from dotenv import load_dotenv
 from langchain_ollama import ChatOllama
 
 from content_generation.prompt_utilities import (
-    make_text_system_message_short,
-    make_text_user_message_short,
-    make_questions_system_message_short,
-    make_questions_user_message_short,
+    make_questions_system_message,
+    make_text_system_message,
 )
 from retrieval.embedding import fetch_similar_entries
 
@@ -38,7 +36,7 @@ class LargeModel(StrEnum):
 def generate_text(
     topic: str,
     model_name: Model = LargeModel.YUMA_DEEPSEEK_JP_32_B,
-    system_message_maker: callable = make_text_system_message_short,
+    system_message_maker: callable = make_text_system_message,
     user_message_maker: Optional[callable] = None,
     log_filepath: Optional[str] = None,
 ) -> str:
@@ -88,6 +86,8 @@ def generate_text(
 
     with open(log_filepath, "a", encoding="utf-8") as log_f:
         log_f.write(f"Response for topic:\n\n{topic}\n\n")
+        log_f.write(f"System message:\n{system_message_maker(topic)}\n\n")
+        log_f.write(f"User message:\n{user_message_maker(topic)}\n\n")    
         log_f.write(f"{response}\n\n")
 
     return response.content
@@ -96,7 +96,7 @@ def generate_text(
 def generate_questions(
     text: str,
     model_name: Model = LargeModel.YUMA_DEEPSEEK_JP_32_B,
-    system_message_maker: callable = make_questions_system_message_short,
+    system_message_maker: callable = make_questions_system_message,
     user_message_maker: Optional[callable] = None,
     log_filepath: Optional[str] = None,
 ) -> list[str]:
@@ -145,6 +145,8 @@ def generate_questions(
 
     with open(log_filepath, "a", encoding="utf-8") as log_f:
         log_f.write(f"Response for text:\n\n{text}\n\n")
+        log_f.write(f"System message:\n{system_message_maker()}\n\n")
+        log_f.write(f"User message:\n{user_message_maker(text)}\n\n")
         log_f.write(f"{response}\n\n")
 
     return response.content
