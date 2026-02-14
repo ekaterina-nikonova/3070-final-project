@@ -2,7 +2,14 @@ import time
 
 from pathlib import Path
 
-from content_generation.edu_content import Model, generate_text
+import torch
+
+from content_generation.edu_content import LargeModel, Model, generate_text
+from content_generation.prompt_utilities import (
+    make_text_system_message_short,
+    make_text_user_message_short,
+    make_text_system_message,
+)
 from content_generation.vocabulary import default_topic
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
@@ -16,11 +23,23 @@ def format_duration(seconds: float) -> str:
     minutes, seconds_ = divmod(rem, 60)
     return f"{hours:02d}:{minutes:02d}:{seconds_:02d}.{ms:03d}"
 
+prompt_makers = {
+    "long-prompt-": (make_text_system_message, None),
+    "short-prompt-": (make_text_system_message_short, make_text_user_message_short),
+}
 
-for model in Model:
-    log_filepath = LOG_DIRPATH / f"{model.value.replace('/', '-').replace(':', '-')}-text.log"
-    start = time.perf_counter()
-    generate_text(default_topic, model, log_filepath)
-    elapsed = time.perf_counter() - start
-    with open(log_filepath, "a", encoding="utf-8") as f:
-        f.write(f"Execution time: {format_duration(elapsed)}\n\n")
+# If CUDA is available (premium hardware), evaluate both regular and large models.
+# Otherwise (consumer-grade hardware), only evaluate regular models (< 6 GB)
+if torch.cuda.is_available():
+    models = list(Model) + list(LargeModel)
+else:
+    models = list(Model)
+
+for prompt_prefix, (system_message_maker, user_message_maker) in prompt_makers.items():
+    for model in Model:
+        log_filepath = LOG_DIRPATH / f"{prompt_prefix}{model.value.replace('/', '-').replace(':', '-')}-text.log"
+        start = time.perf_counter()
+        generate_text(default_topic, model, system_message_maker, user_message_maker, log_filepath)
+        elapsed = time.perf_counter() - start
+        with open(log_filepath, "a", encoding="utf-8") as f:
+            f.write(f"Execution time: {format_duration(elapsed)}\n\n")

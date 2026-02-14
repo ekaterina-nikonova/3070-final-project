@@ -18,6 +18,7 @@ LOG_DIRPATH = CURRENT_MODULE_DIRPATH.parent.parent / "logs"
 
 load_dotenv()
 
+
 class Model(StrEnum):
     GEMMA3_270M = "gemma3:270m"                         # 292 MB; 32K context
     GEMMA3_1B = "gemma3:1b"                             # 815 MB; 32K context
@@ -26,9 +27,19 @@ class Model(StrEnum):
     QWEN3_4B = "qwen3:4b"                               # 2.5 GB; 256K context
 
 
+class LargeModel(StrEnum):
+    DEEPSEEK_R1_32B = "deepseek-r1:32b"                 # 20 GB; 128K context
+    GEMMA3_27B = "gemma3:27b"                           # 17 GB; 128K context
+    QWEN3_30B = "qwen3:30b"                             # 19 GB; 256K context
+    YUMA_DEEPSEEK_JP_32_B = (
+        "yuma/DeepSeek-R1-Distill-Qwen-Japanese:32b")   # 20 GB; 128K context
+
+
 def generate_text(
     topic: str,
-    model_name: Model = Model.GEMMA_JPN,
+    model_name: Model = LargeModel.YUMA_DEEPSEEK_JP_32_B,
+    system_message_maker: callable = make_text_system_message_short,
+    user_message_maker: Optional[callable] = None,
     log_filepath: Optional[str] = None,
 ) -> str:
     """Generate text based on the specified topic using the specified model.
@@ -50,6 +61,11 @@ def generate_text(
     if log_filepath is None:
         log_filepath = LOG_DIRPATH / f"{model_name.value.replace('/', '-').replace(':', '-')}-text.log"
 
+    if user_message_maker is None:
+        # If the system message already contains instructions,
+        # the user message maker will simply return the topic.
+        user_message_maker = lambda x: x
+
     model = ChatOllama(model=model_name, validate_model_on_init=True)
 
     vocabulary_sentences = fetch_similar_entries(topic, results_num=50, fetch_sentences=True)
@@ -57,11 +73,11 @@ def generate_text(
     messages = [
         {
             "role": "system",
-            "content": make_text_system_message_short(topic),
+            "content": system_message_maker(topic),
         },
         {
             "role": "user",
-            "content": make_text_user_message_short(topic)
+            "content": user_message_maker(topic)
         }
     ]
 
@@ -79,7 +95,9 @@ def generate_text(
 
 def generate_questions(
     text: str,
-    model_name: Model = Model.GEMMA_JPN,
+    model_name: Model = LargeModel.YUMA_DEEPSEEK_JP_32_B,
+    system_message_maker: callable = make_questions_system_message_short,
+    user_message_maker: Optional[callable] = None,
     log_filepath: Optional[str] = None,
 ) -> list[str]:
     """
@@ -102,16 +120,21 @@ def generate_questions(
     if log_filepath is None:
         log_filepath = LOG_DIRPATH / f"{model_name.value.replace('/', '-').replace(':', '-')}-questions.log"
 
+    if user_message_maker is None:
+        # If the system message already contains instructions,
+        # the user message maker will simply return the text.
+        user_message_maker = lambda x: x
+
     model = ChatOllama(model=model_name, validate_model_on_init=True)
 
     messages = [
         {
             "role": "system",
-            "content": make_questions_system_message_short(),
+            "content": system_message_maker(),
         },
         {
             "role": "user",
-            "content": make_questions_user_message_short(text)
+            "content": user_message_maker(text)
         }
     ]
 

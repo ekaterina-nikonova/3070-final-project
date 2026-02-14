@@ -2,6 +2,10 @@ from content_generation.vocabulary import vocabulary_dict
 from retrieval.embedding import fetch_similar_entries
 
 
+# The short prompt functions are designed for smaller models that are invoked locally, 
+# and they provide more concise instructions and fewer examples, as well as 
+# a shorter list of vocabulary sentences.
+
 def make_text_system_message_short(topic: str) -> str:
     """A simple system message suitable for small models that are invoked locally."""
     vocabulary_words = fetch_similar_entries(topic, results_num=10, fetch_sentences=True)
@@ -69,6 +73,16 @@ def make_questions_user_message_short(text: str) -> str:
         f"{text}\n\n"
         "Please generate 3 questions based on the text above."
     )
+
+
+# The following functions are for the long prompt, which is used for large models and the Perplexity API. 
+# They contain more detailed instructions and examples, and they also include a longer list 
+# of vocabulary sentences to use in the generated text.
+
+# In case of long prompts, the user message for the text generation is simply the topic, 
+# since the system message already contains detailed instructions and examples.
+# For the same reason, the user message for the question generation will only contain the text 
+# for which questions are to be generated.
 
 
 def make_text_system_message(topic: str) -> str:
