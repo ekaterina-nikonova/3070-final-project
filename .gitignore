@@ -1,9 +1,15 @@
 .idea
 .env
 
+# macOS system files
+.DS_Store
+
 # Logs
 /logs
 
 # Chroma vector database
 chroma_*
 
+# Python cache and egg-info
+__pycache__/
+*.egg-info/
