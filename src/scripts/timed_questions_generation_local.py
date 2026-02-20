@@ -5,7 +5,7 @@ from pathlib import Path
 import torch
 
 from content_generation.edu_content import LargeModel, Model, generate_questions
-from content_generation.prompt_utilities import make_text_system_message, make_text_system_message_short, make_text_user_message_short
+from content_generation.prompt_utilities import make_questions_system_message, make_questions_system_message_short, make_questions_user_message_short
 from content_generation.vocabulary import default_text
 
 
@@ -23,13 +23,14 @@ def format_duration(seconds: float) -> str:
 
 
 prompt_makers = {
-    "long-prompt-": (make_text_system_message, None),
-    "short-prompt-": (make_text_system_message_short, make_text_user_message_short),
+    "long-prompt-": (make_questions_system_message, None),
+    "short-prompt-": (make_questions_system_message_short, make_questions_user_message_short),
 }
 
 # If CUDA is available (premium hardware), evaluate both regular and large models.
 # Otherwise (consumer-grade hardware), only evaluate regular models (< 6 GB)
 if torch.cuda.is_available():
+    print("CUDA is available. Evaluating both regular and large models.")
     models = list(Model) + list(LargeModel)
 else:
     models = list(Model)
@@ -37,6 +38,7 @@ else:
 
 for prompt_prefix, (system_message_maker, user_message_maker) in prompt_makers.items():
     for model in models:
+        print(f"Generating questions for model {model.value} with prompt prefix '{prompt_prefix}'...")
         log_filepath = LOG_DIRPATH / f"{prompt_prefix}{model.value.replace('/', '-').replace(':', '-')}-questions.log"
         start = time.perf_counter()
         generate_questions(default_text, model, system_message_maker, user_message_maker, log_filepath)

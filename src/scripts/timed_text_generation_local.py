@@ -31,12 +31,14 @@ prompt_makers = {
 # If CUDA is available (premium hardware), evaluate both regular and large models.
 # Otherwise (consumer-grade hardware), only evaluate regular models (< 6 GB)
 if torch.cuda.is_available():
+    print("CUDA is available. Evaluating both regular and large models.")
     models = list(Model) + list(LargeModel)
 else:
     models = list(Model)
 
 for prompt_prefix, (system_message_maker, user_message_maker) in prompt_makers.items():
-    for model in Model:
+    for model in models:
+        print(f"Generating text for model {model.value} with prompt prefix '{prompt_prefix}'...")
         log_filepath = LOG_DIRPATH / f"{prompt_prefix}{model.value.replace('/', '-').replace(':', '-')}-text.log"
         start = time.perf_counter()
         generate_text(default_topic, model, system_message_maker, user_message_maker, log_filepath)
