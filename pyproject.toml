@@ -39,6 +39,7 @@ dependencies = [
     "transformers>=4.57.6",
     "unidic-lite>=1.0.8",
     "uvicorn>=0.40.0",
+    "python-multipart>=0.0.21",
 ]
 
 [tool.uv]

@@ -1,6 +1,9 @@
 .idea
 .env
 
+# macOS system files
+.DS_Store
+
 # Logs
 /logs
 
