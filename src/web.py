@@ -7,7 +7,8 @@ from pathlib import Path
 from uuid import uuid4
 from pydantic import BaseModel
 
-from content_generation.edu_content_perplexity import generate_text, generate_questions
+from content_generation.edu_content import generate_text, generate_questions
+from content_generation.vocabulary import default_text, default_questions
 from assessment.analysis import analyse_answers
 
 class GenerateRequest(BaseModel):
@@ -32,7 +33,9 @@ async def generate(req: GenerateRequest):
 
     # Generate text and questions using existing functions
     text = generate_text(topic)
+    print(f"Generated text for topic '{topic}': {text}")
     questions = generate_questions(text)
+    print(f"Generated questions for topic '{topic}': {questions}")
 
     return GenerateResponse(text=text, questions=questions)
 
@@ -53,7 +56,7 @@ async def generate(req: GenerateRequest):
 
     # Use a canned response for testing
     test_response = json.loads("""
-    {"text": "今日は母の誕生日です。誕生日、おめでとうございます。お母さんは四十五歳ぐらいの歳です。家族といるとしあわせです。母が来ました。ただいま。昨日母に電話しました。お母さんから手紙が来ました。けいたいでしゃしんをとります。あたらし いけいたいはおおきいです。けいたいででんわをします。家族と一緒にいます。来週、母の誕生日パーティーがあります。こうがいでさんぽします。こうがいはとおいけど、たのしいです。お母さんが作ったとろとろのオムライスを食べました。おべんとうを一 つください。おべんとう、あたためましょうか。おさけはあまいです。くすりはにがいです。お母さんは何もしませんでした。今日はさいあくの日でした。今日はダメじゃないです。せいせきがいいので、うれしいです。小さいとき、お母さんはしんせつでした 。あたらしいゆびわをあげます。お母さんはうれしそうです。姉はえいごがとくいです。姉が一人います。先週の誕生日に、姉がおごりでケーキを買いました。姉はえをかくのが上手です。えをかくのはたのしいです。七日は私の誕生日です。二十日は友達の誕 生日です。九日は友達の誕生日です。昨日は友達の誕生日でした。お母さんはおいくつですか。四十五歳です。おおみそかは家族と一緒にいます。かいしゃにいくまえに、でんきをあけます。すわります。おこりました。今日は手がベタベタです。じこはきらい です。かわいいみみがあります。うさぎを愛します。しんぷはしんせつなので、みんながすきです。しんぷはしんせつです。あたまがいいです。やっつ の子供がいます。あかちゃんのとき、よくねました。きれいなけっこんしきでした。しょうしょうおまちください。ゆびわをあげます。今日、よやくを入れます。こわれます。へんにちは休みです。お母さんはいつも優しいです。家族みんなでお祝いします。お母さん、ありがとうございます。", "questions": ["今日は**お母さん**の**誕生日**ですか。", "お母さん は**何歳**ぐらいですか。", "**姉**は何が**とくい**ですか。", "**七日**は**誰**の**誕生日**ですか。"]}
+    {"text": "今日は母の誕生日です。誕生日、おめでとうございます。お母さんは四十五歳ぐらいの歳です。", "questions": ["今日は**お母さん**の**誕生日**ですか。", "お母さん は**何歳**ぐらいですか。", "**姉**は何が**とくい**ですか。"]}
     """)
     text = test_response["text"]
     questions = test_response["questions"]
@@ -101,10 +104,10 @@ async def submit_answer(
 
     # Call analyse_answers in threadpool (analysis is synchronous / may block)
     try:
-        # feedback = await run_in_threadpool(
-        #     analyse_answers, text, selected_question, str(hw_path), str(sp_path)
-        # )
-        feedback = "All good! ありがとうございます。"
+        feedback = await run_in_threadpool(
+            analyse_answers, text, selected_question, str(hw_path), str(sp_path)
+        )
+        # feedback = "All good! ありがとうございます。"
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Analysis failed: {e}")
 
