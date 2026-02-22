@@ -16,3 +16,6 @@ __pycache__/
 
 # Python package info
 *.egg-info
+
+# Directory for uploaded answers
+/src/uploads
