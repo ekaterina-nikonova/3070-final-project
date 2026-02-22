@@ -8,7 +8,8 @@ from langchain_ollama import ChatOllama
 import torch
 
 from content_generation.prompt_utilities import (
-    make_questions_system_message,
+    make_questions_system_message_short,
+    make_questions_user_message_short,
     make_text_system_message,
 )
 from retrieval.embedding import fetch_similar_entries
@@ -68,15 +69,27 @@ class LargeModel(StrEnum):
 
 # Models that proved to be best-performing on consumer-grade and premium hardware
 # according to the evaluation.
-DEFAULT_MODEL = (
+DEFAULT_TEXT_MODEL = (
     LargeModel.GEMMA3_27B
+    if torch.cuda.is_available() else 
+    Model.GEMMA_JPN
+)
+
+DEFAULT_QUESTION_MODEL = (
+    LargeModel.GEMMA3_27B
+    if torch.cuda.is_available() else 
+    Model.GEMMA_JPN
+)
+
+DEFAULT_ASSESSMENT_MODEL = (
+    LargeModel.YUMA_DEEPSEEK_JP_32_B
     if torch.cuda.is_available() else 
     Model.GEMMA_JPN
 )
 
 def generate_text(
     topic: str,
-    model_name: Model = DEFAULT_MODEL,
+    model_name: Model = DEFAULT_TEXT_MODEL,
     system_message_maker: callable = make_text_system_message,
     user_message_maker: Optional[callable] = None,
     log_filepath: Optional[str] = None,
@@ -136,9 +149,9 @@ def generate_text(
 
 def generate_questions(
     text: str,
-    model_name: Model = DEFAULT_MODEL,
-    system_message_maker: callable = make_questions_system_message,
-    user_message_maker: Optional[callable] = None,
+    model_name: Model = DEFAULT_QUESTION_MODEL,
+    system_message_maker: callable = make_questions_system_message_short,
+    user_message_maker: Optional[callable] = make_questions_user_message_short,
     log_filepath: Optional[str] = None,
 ) -> list[str]:
     """
