@@ -5,7 +5,7 @@ from langchain_ollama import ChatOllama
 
 from answer_processing.ocr import convert_to_text as image_to_text
 from answer_processing.asr import convert_to_text as audio_to_text
-from content_generation.edu_content import LargeModel, Model
+from content_generation.edu_content import LargeModel, Model, DEFAULT_MODEL
 
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
@@ -17,7 +17,7 @@ def analyse_answers(
     question: str,
     handwritten_answer_filepath,
     spoken_answer_filepath,
-    model_name: Model | LargeModel = LargeModel.YUMA_DEEPSEEK_JP_32_B,
+    model_name: Model | LargeModel = DEFAULT_MODEL,
     log_filepath: Optional[Path] = None,
 ) -> str:
     """Analyse the answers using the provided text, question, handwritten answer image, and spoken answer audio.

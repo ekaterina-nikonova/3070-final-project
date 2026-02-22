@@ -1,15 +1,48 @@
+import re
 from enum import StrEnum
 from pathlib import Path
 from typing import Optional
 
 from dotenv import load_dotenv
 from langchain_ollama import ChatOllama
+import torch
 
 from content_generation.prompt_utilities import (
     make_questions_system_message,
     make_text_system_message,
 )
 from retrieval.embedding import fetch_similar_entries
+
+
+def _strip_think_tags(text: str) -> str:
+    """Remove <think>...</think> blocks from LLM responses (DeepSeek reasoning)."""
+    return re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+
+
+def _parse_questions_from_response(response_text: str) -> list[str]:
+    """
+    Parse questions from the LLM response text.
+    
+    Handles:
+    - <think>...</think> tags (DeepSeek reasoning)
+    - Numbered lists (1. Question, 2. Question, etc.)
+    - Line-separated questions
+    """
+    text = _strip_think_tags(response_text)
+    
+    # Split by common list patterns: "1.", "2.", etc. or newlines
+    # First try numbered list pattern
+    lines = re.split(r'\n+', text.strip())
+    
+    questions = []
+    for line in lines:
+        # Remove numbering like "1.", "2)", "1:" etc.
+        cleaned = re.sub(r'^\s*\d+[\.\)\:]\s*', '', line.strip())
+        # Only include non-empty lines that look like questions (contain Japanese or ?)
+        if cleaned and (re.search(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]', cleaned) or '?' in cleaned):
+            questions.append(cleaned)
+    
+    return questions
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
 LOG_DIRPATH = CURRENT_MODULE_DIRPATH.parent.parent / "logs"
@@ -33,9 +66,17 @@ class LargeModel(StrEnum):
         "yuma/DeepSeek-R1-Distill-Qwen-Japanese:32b")   # 20 GB; 128K context
 
 
+# Models that proved to be best-performing on consumer-grade and premium hardware
+# according to the evaluation.
+DEFAULT_MODEL = (
+    LargeModel.GEMMA3_27B
+    if torch.cuda.is_available() else 
+    Model.GEMMA_JPN
+)
+
 def generate_text(
     topic: str,
-    model_name: Model = LargeModel.YUMA_DEEPSEEK_JP_32_B,
+    model_name: Model = DEFAULT_MODEL,
     system_message_maker: callable = make_text_system_message,
     user_message_maker: Optional[callable] = None,
     log_filepath: Optional[str] = None,
@@ -90,12 +131,12 @@ def generate_text(
         log_f.write(f"User message:\n{user_message_maker(topic)}\n\n")    
         log_f.write(f"{response}\n\n")
 
-    return response.content
+    return _strip_think_tags(response.content)
 
 
 def generate_questions(
     text: str,
-    model_name: Model = LargeModel.YUMA_DEEPSEEK_JP_32_B,
+    model_name: Model = DEFAULT_MODEL,
     system_message_maker: callable = make_questions_system_message,
     user_message_maker: Optional[callable] = None,
     log_filepath: Optional[str] = None,
@@ -149,4 +190,4 @@ def generate_questions(
         log_f.write(f"User message:\n{user_message_maker(text)}\n\n")
         log_f.write(f"{response}\n\n")
 
-    return response.content
+    return _parse_questions_from_response(response.content)
