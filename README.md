@@ -11,3 +11,15 @@ Find the IP of the computer the server is running on. Test the connection in the
 ```shell
 curl -v http://192.168.84.51:8000/help
 ```
+
+Send a POST request to the `/generate-test` endpoint to receive a canned response containing a text and a list of questions:
+
+```shell
+curl -sS X POST -H "Content-Type: application/json" -d '{"topic": "..."}' http://192.168.84.51:8000/generate-test
+```
+
+In PowerShell on Windows,
+
+```shell
+Invoke-RestMethod -Uri "http://192.168.84.58:8000/generate-test" -Method POST -ContentType "application/json" -Body '{"topic": "Sunday"}'
+```
