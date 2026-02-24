@@ -2,6 +2,9 @@ from content_generation.vocabulary import vocabulary_dict
 from retrieval.embedding import fetch_similar_entries
 
 
+DEFAULT_TEXT_LENGTH_CHAR = 200
+
+
 # The short prompt functions are designed for smaller models that are invoked locally, 
 # and they provide more concise instructions and fewer examples, as well as 
 # a shorter list of vocabulary sentences.
@@ -121,7 +124,7 @@ def make_text_system_message(topic: str) -> str:
         "行きたくないです。\n"
         "学校にいきたくなかったです。\n\n"
 
-        "The text must contain from 200 to 500 words, be cohesive and tell an engaging story."
+        f"The text must contain up to {DEFAULT_TEXT_LENGTH_CHAR} characters, be cohesive and tell an engaging story."
 
         "Your response must only contain the text you write, nothing more."
     )
