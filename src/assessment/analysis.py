@@ -5,7 +5,12 @@ from langchain_ollama import ChatOllama
 
 from answer_processing.ocr import convert_to_text as image_to_text
 from answer_processing.asr import convert_to_text as audio_to_text
-from content_generation.edu_content import LargeModel, Model, DEFAULT_ASSESSMENT_MODEL
+from content_generation.edu_content import (
+    LargeModel,
+    Model,
+    DEFAULT_ASSESSMENT_MODEL,
+    _strip_think_tags,
+)
 
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
@@ -92,4 +97,4 @@ def analyse_answers(
         log_f.write(f"User message:\n{user_message}\n\n")
         log_f.write(f"{response}\n\n")
 
-    return response.content
+    return _strip_think_tags(response.content)
