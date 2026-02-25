@@ -93,11 +93,6 @@ def _make_rewrite_prompt(
     """Create a prompt asking the model to rewrite the text without extra words."""
     extra_words_str = ", ".join(extra_words)
     vocab_str = "\n".join(vocabulary_sentences)
-
-    print("=== Rewrite Prompt ===")
-    print(f"Making rewrite prompt with extra words: {extra_words_str}")
-    print("Original text:")
-    print(original_text)
     
     return (
         f"Please rewrite the following Japanese text.\n\n"
