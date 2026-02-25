@@ -7,7 +7,7 @@ from pathlib import Path
 from uuid import uuid4
 from pydantic import BaseModel
 
-from content_generation.edu_content import generate_text, generate_questions
+from content_generation.edu_content_local import generate_text, generate_questions
 from content_generation.vocabulary import default_text, default_questions
 from assessment.analysis import analyse_answers
 

@@ -6,7 +6,7 @@ import torch
 
 from content_generation.vocabulary import default_text, default_questions
 from assessment.analysis import analyse_answers
-from content_generation.edu_content import LargeModel, Model
+from content_generation.edu_content_local import LargeModel, Model
 
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()

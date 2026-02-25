@@ -4,7 +4,7 @@ from pathlib import Path
 
 import torch
 
-from content_generation.edu_content import LargeModel, Model, generate_questions
+from content_generation.edu_content_local import LargeModel, Model, generate_questions
 from content_generation.prompt_utilities import make_questions_system_message, make_questions_system_message_short, make_questions_user_message_short
 from content_generation.vocabulary import default_text
 

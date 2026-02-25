@@ -5,7 +5,7 @@ from langchain_ollama import ChatOllama
 
 from answer_processing.ocr import convert_to_text as image_to_text
 from answer_processing.asr import convert_to_text as audio_to_text
-from content_generation.edu_content import (
+from content_generation.edu_content_local import (
     LargeModel,
     Model,
     DEFAULT_ASSESSMENT_MODEL,
