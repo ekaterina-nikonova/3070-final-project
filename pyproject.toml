@@ -1,3 +1,5 @@
+# All packages except PyTorch-related ones 
+# are installed from the main index, pypi.
 [[tool.uv.index]]
 name = "pypi"
 url = "https://pypi.org/simple"
@@ -7,10 +9,14 @@ default = true
 name = "cuda130"
 url = "https://download.pytorch.org/whl/cu130"
 
+# For CUDA 13.0 (supports the Blackwell architecture),
+# a custom index is used -- cuda130
 [tool.uv.sources]
 torch = { index = "cuda130" }
 torchaudio = { index = "cuda130" }
 torchvision = { index = "cuda130" }
+# Explicitly provide the source for markupsafe to prevent
+# installation of the legacy version from the cuda130 index.
 markupsafe = { index = "pypi" }
 
 
@@ -42,8 +48,11 @@ dependencies = [
     "python-multipart>=0.0.21",
 ]
 
+# Configure the project as a package so that scripts
+# can find dependencies in the source directory.
 [tool.uv]
 package = true
 
+# The source directory for dependencies.
 [tool.setuptools.packages.find]
 where = ["src"]
