@@ -1,6 +1,6 @@
 # Japanese Language Exercise System (JES)
 
-A web-based educational tool for Japanese language learning. The system generates reading passages and comprehension questions using LLMs, accepting handwritten and spoken answers from learners.
+A web-based educational tool for Japanese language learning. The system generates reading passages and comprehension questions using LLMs and the RAG technique accessing a vector store containing the vocabulary to be trained. Handwritten and spoken answers are collected from the learner, and provides feedback on their grammatical correctness and appropriateness.
 
 ## Prerequisites
 
