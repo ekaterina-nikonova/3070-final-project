@@ -1,3 +1,31 @@
+"""
+Timed analysis benchmarking (local models)
+==========================================
+
+Purpose:
+    Benchmarks the performance of local LLM models for analysing user's answers.
+    Measures execution time for each model to evaluate answer correctness against
+    a reference text and question. Used for comparing inference speeds across
+    different model sizes.
+
+Workflow:
+    1. Detects CUDA availability to determine which models to test:
+       - Consumer hardware (no CUDA): Tests smaller models only (<6 GB)
+       - Premium hardware (CUDA): Tests both regular and large models
+    2. For each model, runs the answer analysis pipeline which:
+       - Processes a handwritten answer image (via OCR)
+       - Processes a spoken answer audio file (via ASR)
+       - Evaluates answers against the provided text and question
+    3. Logs execution time for each model to separate log files
+
+Output:
+    Creates log files in the logs/ directory with naming pattern:
+        {model-name}-assessment.log
+
+Usage:
+    python -m src.scripts.timed_analysis_local
+"""
+
 import time
 
 from pathlib import Path
@@ -7,18 +35,11 @@ import torch
 from content_generation.vocabulary import default_text, default_questions
 from assessment.analysis_local import analyse_answers
 from content_generation.edu_content_local import LargeModel, Model
+from scripts.utils import format_duration
 
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
 LOG_DIRPATH = CURRENT_MODULE_DIRPATH.parent.parent / "logs"
-
-
-def format_duration(seconds: float) -> str:
-    ms = int((seconds - int(seconds)) * 1000)
-    secs_total = int(seconds)
-    hours, rem = divmod(secs_total, 3600)
-    minutes, seconds_ = divmod(rem, 60)
-    return f"{hours:02d}:{minutes:02d}:{seconds_:02d}.{ms:03d}"
 
 
 # If CUDA is available (premium hardware), evaluate both regular and large models.

@@ -1,3 +1,33 @@
+"""
+Timed question generation benchmarking (local models)
+=====================================================
+
+Purpose:
+    Benchmarks local LLM models for generating comprehension questions from
+    Japanese text. Tests each model with both long and short prompt variations
+    to evaluate prompt engineering impact on generation quality and speed.
+
+Workflow:
+    1. Detects CUDA availability to determine available models:
+       - Consumer hardware (no CUDA): Tests smaller models only (<6 GB)
+       - Premium hardware (CUDA): Tests both regular and large models
+    2. For each prompt style (long/short) and each model:
+       - Generates comprehension questions for the default Japanese text
+       - Measures and logs the execution time
+    3. Creates separate log files for each model/prompt combination
+
+Prompt Variations:
+    - long-prompt: Detailed system message with comprehensive instructions
+    - short-prompt: Concise system + user message pair
+
+Output:
+    Creates log files in logs/ directory with naming pattern:
+        {prompt-style}{model-name}-questions.log
+
+Usage:
+    python -m src.scripts.timed_questions_generation_local
+"""
+
 import time
 
 from pathlib import Path
@@ -7,19 +37,11 @@ import torch
 from content_generation.edu_content_local import LargeModel, Model, generate_questions
 from content_generation.prompt_utilities import make_questions_system_message, make_questions_system_message_short, make_questions_user_message_short
 from content_generation.vocabulary import default_text
+from scripts.utils import format_duration
 
 
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
 LOG_DIRPATH = CURRENT_MODULE_DIRPATH.parent.parent / "logs"
-
-
-def format_duration(seconds: float) -> str:
-    ms = int((seconds - int(seconds)) * 1000)
-    secs_total = int(seconds)
-    hours, rem = divmod(secs_total, 3600)
-    minutes, seconds_ = divmod(rem, 60)
-    return f"{hours:02d}:{minutes:02d}:{seconds_:02d}.{ms:03d}"
-
 
 
 prompt_makers = {
