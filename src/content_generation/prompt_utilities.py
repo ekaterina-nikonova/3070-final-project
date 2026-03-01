@@ -2,18 +2,25 @@ from content_generation.vocabulary import vocabulary_dict
 from retrieval.embedding import fetch_similar_entries
 
 
+# Default maximum character length for generated Japanese text
+# (200 characters is appropriate for A1/JLPT N5 level reading material)
 DEFAULT_TEXT_LENGTH_CHAR = 200
 
-
-# The short prompt functions are designed for smaller models that are invoked locally, 
-# and they provide more concise instructions and fewer examples, as well as 
-# a shorter list of vocabulary sentences.
+#======================================================================================================================
+# The short prompt functions are designed for smaller models that are invoked locally.
+# They provide more concise instructions and fewer examples, as well as a shorter list of vocabulary sentences.
+#======================================================================================================================
 
 def make_text_system_message_short(topic: str) -> str:
     """A simple system message suitable for small models that are invoked locally."""
+    # Fetch 10 vocabulary sentences semantically similar to the topic
+    # from the vector store to constrain the model's word choices.
     vocabulary_words = fetch_similar_entries(topic, results_num=10, fetch_sentences=True)
+    # Join vocabulary sentences with newlines for readable display in the prompt.
     vocabulary_str = "\n".join(vocabulary_words)
 
+    # Return a concise system prompt with role, task, and constraints.
+    # Includes one example to guide the model's output format.
     return (
         "You are a Japanese teacher creating reading material for JLPT N5 (beginner) students.\n"
         "The user will provide a topic, and you have to write a short story on that topic.\n\n"
@@ -35,6 +42,8 @@ def make_text_system_message_short(topic: str) -> str:
 
 def make_text_user_message_short(topic: str) -> str:
     """A simple user message suitable for small models that are invoked locally."""
+    # Return a brief user prompt that restates the topic and key constraints
+    # while keeping instructions minimal since the system message already contains all details.
     return (
         f"Write a story about this topic: {topic}\n\n"
         "Remember to use simple grammar and keep it under 200 characters."
@@ -43,6 +52,9 @@ def make_text_user_message_short(topic: str) -> str:
 
 def make_questions_system_message_short() -> str:
     """A simple system message suitable for small models that are invoked locally."""
+    # Return a system prompt for generating comprehension questions.
+    # Includes role definition, task description, constraints, examples, and guidelines.
+    # The xamples show the expected input-output format for the model.
     return (
         "You are a Japanese teacher.\n\n"
         
@@ -71,6 +83,8 @@ def make_questions_system_message_short() -> str:
 
 def make_questions_user_message_short(text: str) -> str:
     """A simple user message suitable for small models that are invoked locally."""
+    # Return a brief user prompt that provides the text and requests questions.
+    # Keeps instructions minimal since the system message already contains detailed guidelines.
     return (
         "Here is a text for a student:\n\n"
         f"{text}\n\n"
@@ -78,21 +92,28 @@ def make_questions_user_message_short(text: str) -> str:
     )
 
 
-# The following functions are for the long prompt, which is used for large models and the Perplexity API. 
+#======================================================================================================================
+# The long prompts are used for large models and the Perplexity API.
 # They contain more detailed instructions and examples, and they also include a longer list 
 # of vocabulary sentences to use in the generated text.
 
-# In case of long prompts, the user message for the text generation is simply the topic, 
-# since the system message already contains detailed instructions and examples.
+# In this case, the user message for the text generation is simply the topic, 
+# since the system message already contains all detailed instructions and examples.
 # For the same reason, the user message for the question generation will only contain the text 
 # for which questions are to be generated.
+#======================================================================================================================
 
 
 def make_text_system_message(topic: str) -> str:
     # From the vector store, fetch 50 sentences related to the topic to use as vocabulary.
+    # More sentences provide a richer vocabulary pool for larger models.
     vocabulary_words = fetch_similar_entries(topic, results_num=50, fetch_sentences=True)
+    # Join vocabulary sentences with newlines for readable display in the prompt.
     vocabulary_str = "\n".join(vocabulary_words)
 
+    # Return a comprehensive system prompt with detailed instructions
+    # that includes grammatical examples for various tenses and constructions
+    # and demonstrates the use of linking words and negation patterns.
     return (
         "You are a creator of educational Japanese content for A1-level learners. "
         "Your task is to write a short, cohesive text in Japanese on the topic the user provides. "
@@ -131,8 +152,12 @@ def make_text_system_message(topic: str) -> str:
 
 
 def make_questions_system_message() -> str:
+    # Build a vocabulary string with Japanese words and their English translations.
+    # Each entry is formatted as "word (translation)" for bilingual reference.
     vocabulary = "\n".join([f"{word} ({translation})" for word, translation in vocabulary_dict.items()])
 
+    # Return a comprehensive system prompt for question generation
+    # that includes the full vocabulary list to constrain the language used.
     return (
         "You are a creator of educational Japanese content for A1-level learners. "
         "Your task is to write three comprehension questions for the text that the user provides.\n\n"

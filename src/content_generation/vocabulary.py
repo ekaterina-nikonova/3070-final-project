@@ -1,3 +1,6 @@
+# The complete JLPT N5 (A1 level) vocabulary in the format suitable for a CSV representation:
+# Japanese word/phrase;English translation(s)
+# Multiple translations are separated by commas.
 vocabulary = """
     再来年;the year after next
     毎週;every week
@@ -2047,14 +2050,24 @@ vocabulary = """
     ください;please
     おちゃ;green teas, green tea, tea
     """
+
+# Process the raw vocabulary string into a dictionary:
+# 1. Strip leading/trailing whitespace and split by newlines into a list of entries
 vocabulary_list_split = vocabulary.strip().split("\n")
+# 2. Strip whitespace from each individual entry
 vocabulary_list_stripped = [e.strip() for e in vocabulary_list_split]
+# 3. Split each entry by semicolon to separate Japanese and English parts
 vocabulary_list = [e.split(";") for e in vocabulary_list_stripped]
 
+# Create a dictionary mapping Japanese words to their English translations
 vocabulary_dict = {jap: eng  for jap, eng in vocabulary_list}
 
 
+# Default values for testing and demonstration purposes:
+# A sample topic string in Japanese ("A friend came.")
 default_topic = "友達が来ました。"
+
+# A sample generated text about meeting a friend - demonstrates the expected output format
 default_text = (
     "昨日、私はうえので友だちに会いました。友だちはとても笑顔で、久しぶりに会えてうれしかったです。"
     "友だちが来るのは久しぶりだったので、れつにすわって、ゆっくり話しました。"
@@ -2063,11 +2076,15 @@ default_text = (
     "友だちとやっと会えて、元気になりました。明日はまたべつの友だちと会う予定です。"
     "友だちがいますから、毎日が楽しいです。"
 )
+
+# Sample comprehension questions that could be generated for the default text
 default_questions = [
     "昨日どこで友だちに会いましたか？",
     "友だちとどんな話をしましたか？",
     "明日は何をする予定ですか？",
 ]
+
+# Sample model answers corresponding to the default questions for testing the answer assessment functionality
 default_answers = [
     "昨日、友達にうえので会いました。",
     "友達と最近のえんげきの話をしました。",
