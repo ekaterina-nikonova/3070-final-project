@@ -13,7 +13,7 @@ from uuid import uuid4
 from pydantic import BaseModel
 
 from content_generation.edu_content_local import generate_text, generate_questions
-from assessment.analysis import analyse_answers
+from assessment.analysis_local import analyse_answers
 
 
 # =============================================================================

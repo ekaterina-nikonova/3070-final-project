@@ -1,4 +1,4 @@
-from assessment.analysis import analyse_answers
+from assessment.analysis_local import analyse_answers
 from content_generation.edu_content_perplexity import generate_text, generate_questions
 
 

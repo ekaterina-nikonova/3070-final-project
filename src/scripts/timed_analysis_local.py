@@ -5,7 +5,7 @@ from pathlib import Path
 import torch
 
 from content_generation.vocabulary import default_text, default_questions
-from assessment.analysis import analyse_answers
+from assessment.analysis_local import analyse_answers
 from content_generation.edu_content_local import LargeModel, Model
 
 
