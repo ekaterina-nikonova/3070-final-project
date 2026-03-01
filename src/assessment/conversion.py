@@ -14,6 +14,8 @@ import subprocess
 from pathlib import Path
 
 
+
+# Define the path to the answer_processing package in the sibling directory.
 CURRENT_MODULE_DIRPATH = Path(__file__).parent.resolve()
 ANSWER_PROCESSING_DIRPATH = CURRENT_MODULE_DIRPATH.parent / "answer_processing"
 
@@ -26,10 +28,16 @@ def image_to_text(
 ) -> str:
     """Run the ocr.py module from the answer_processing package with its own Python and return the text it prints to stdout.
     """
+    # Convert the runnable path string to a Path object for validation.
     ocr_runnable_filepath = Path(ocr_runnable)
+    # Verify the OCR script exists before attempting to run it.
     if not ocr_runnable_filepath.exists():
         raise FileNotFoundError(f"`{ocr_runnable}` not found")
 
+    # Execute the OCR script as a subprocess using the specified Python interpreter:
+    # capture_output=True captures both stdout and stderr;
+    # text=True returns string output instead of bytes;
+    # check=False prevents automatic exception on non-zero return code (handled manually below).
     proc = subprocess.run(
         [ocr_python, str(ocr_runnable_filepath), image_path],
         capture_output=True,
@@ -38,9 +46,11 @@ def image_to_text(
         check=False,
     )
 
+    # Check if the subprocess failed and raise an error with the stderr message.
     if proc.returncode != 0:
         raise RuntimeError(f"The OCR process failed ({proc.returncode}):\n{proc.stderr.strip()}")
 
+    # Return the OCR output text, stripped of leading/trailing whitespace.
     return proc.stdout.strip()
 
 
@@ -52,10 +62,16 @@ def audio_to_text(
 ) -> str:
     """Run the asr.py module from the answer_processing package with its own Python and return the text it prints to stdout.
     """
+    # Convert the runnable path to a Path object for validation.
     asr_runnable_filepath = Path(asr_runnable)
+    # Verify the ASR script exists before attempting to run it.
     if not asr_runnable_filepath.exists():
         raise FileNotFoundError(f"`{asr_runnable}` not found")
 
+    # Execute the ASR script as a subprocess using the specified Python interpreter:
+    # capture_output=True captures both stdout and stderr;
+    # text=True returns string output instead of bytes;
+    # check=False prevents automatic exception on non-zero return code (handled manually below).
     proc = subprocess.run(
         [asr_python, str(asr_runnable_filepath), image_path],
         capture_output=True,
@@ -64,7 +80,9 @@ def audio_to_text(
         check=False,
     )
 
+    # Check if the subprocess failed and raise an error with the stderr message.
     if proc.returncode != 0:
         raise RuntimeError(f"The ASR process failed ({proc.returncode}):\n{proc.stderr.strip()}")
 
+    # Return the ASR output text, stripped of leading/trailing whitespace.
     return proc.stdout.strip()
