@@ -1,3 +1,15 @@
+"""
+This module provides functions to be used when answer processing functions
+(OCR and ASR) require a separate Python environment from the main application, 
+to avoid dependency conflicts. This is the case for the consumer hardware platform
+(Intel MacBook), where LLMs require a newer version of numpy than the one supported 
+by the OCR and ASR models.
+
+The functions in this module run the answer processing modules as subprocesses 
+and require a virtual environment in the answer_processing package with the necessary 
+dependencies installed (see the pyproject.toml file in the answer_processing directory).
+"""
+
 import subprocess
 from pathlib import Path
 

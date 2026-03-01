@@ -1,0 +1,20 @@
+# Use this file for creating a separate virtual environment
+# for the answer processing modules. This allows us to manage dependencies
+# specific to these modules without affecting the rest of the project.
+[project]
+name = "answer-processing"
+version = "0.1.0"
+description = "Answer processing modules for OCR and ASR."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fugashi>=1.5.2",
+    "numpy==1.26.4",
+    "pillow>=12.0.0",
+    "protobuf>=6.33.1",
+    "sentencepiece>=0.2.1",
+    "soundfile>=0.13.1",
+    "torch==2.2",
+    "transformers>=4.57.1",
+    "unidic-lite>=1.0.8",
+]
