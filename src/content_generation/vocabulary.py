@@ -4,133 +4,133 @@
 vocabulary = """
     再来年;the year after next
     毎週;every week
-    おめでとう;happy, congratulations (on)
+    おめでとう;congratulations
     誕;birthday
-    出かけ;go out
+    出かけ;to go out
     毎月;every month
     毎晩;every night
     誕生日;birthday
-    週間;weeks, week
+    週間;week
     去年;last year
-    去;went
-    ヶ月;months, month, months'
+    去;past
+    ヶ月;month
     一昨年;the year before last
-    九日;ninth, nine days
-    月;(the) moons, (a) month, (a) moon
-    曜日;day (of the week), day
+    九日;ninth day, nine days
+    月;month, moon
+    曜日;day of the week
     塩っぱい;salty
     すっぱい;sour
-    グラス;glass, glasses
-    茶碗;rice bowls, rice bowl, bowls
-    碗;bowls
+    グラス;glass
+    茶碗;rice bowl
+    碗;bowl
     好物;favorite food
-    本当;real, (in) fact, true
+    本当;real, true, in fact
     ボウル;bowl
     寿司;sushi
-    腹;(my) stomach
-    すき;like, likes, favorite
-    コップ;glass, cup, cups
+    腹;stomach
+    すき;to like, favorite
+    コップ;glass, cup
     お腹;stomach, belly
-    皿;(a) plate, (the) plates, (the) plate
-    箸;chopsticks, chopstick
-    通り;(the) streets, (the) street, like
-    小さな;little, small, slight
-    大きな;big, large, major
+    皿;plate
+    箸;chopsticks
+    通り;street, avenue
+    小さな;small, little
+    大きな;big, large
     はじめに;first, firstly
-    入り;with, join
+    入り;to enter, to join
     通;(counter for letters)
-    出;appear, participate
+    出;to appear, to leave
     向こう;over there, the other side
     向;toward
-    道;(a) road, (the) streets, path
-    あちら;that, (over) there, in that direction
-    銀行;bank, banks
+    道;road, path
+    あちら;over there, that direction
+    銀行;bank
     銀;silver
-    病院;hospital, hospitals
+    病院;hospital
     そちら;there, that, that way
     どちら;where, which, which one
-    建物;building, buildings
-    建;building, buildings
+    建物;building
+    建;building
     出口;exit
-    入;with, have, put
-    入り口;entrance, entry
+    入;to enter, to put
+    入り口;entrance
     変;weird, strange
-    紅茶;tea, black tea
-    多く;much, a lot, many
+    紅茶;black tea
+    多く;much, many, a lot
     酒;alcohol
     紅;crimson
-    大変;tough, extremely, in trouble
+    大変;tough, very, terrible
     全く;at all, totally, completely
     少;little
     結構;fine, quite, pretty
-    部;departments, club, copies
-    全部;all (of it), a whole, the whole
-    少ない;little, few, not much
+    部;department, club
+    全部;all, everything
+    少ない;few, little
     砂糖;sugar
     多;many
     醤油;soy sauce
     ミント;mint
     塩;salt
     夕飯;dinner
-    果物;(the) fruit, (a) fruit, (the) fruits
+    果物;fruit
     弁当;bento
-    おいしく;delicious, taste good, tasty
+    おいしく;deliciously
     いかが;how
-    全然;not ... at all, no ... at all, never
-    お弁当;bento, lunchbox, lunchboxes
-    弱;weaker
-    吹;blow
+    全然;not at all
+    お弁当;bento, lunchbox
+    弱;weak
+    吹;to blow
     風;wind
-    吹き;play (flute, recorder etc.)
-    弱い;weak, sensitive, delicate
+    吹き;to blow, to play (flute)
+    弱い;weak, delicate
     強い;strong
     夕方;evening, dusk
     昼間;daytime
-    曇って;clouded up, cloudy, fogging up
+    曇って;cloudy, overcast
     暗;dark
     方;person, side, way
-    降って;falls
-    晴れて;sunny, clear, cleared (and)
-    暗い;dark, (it's) dark
+    降って;falling
+    晴れて;sunny, clear
+    暗い;dark
     朝;morning
     今朝;this morning
     雪;snow
     今晩;this evening
     夕べ;last night
     夕;evening
-    明るい;bright, cheerful, brighter
-    降;fall
+    明るい;bright, cheerful
+    降;to fall
     空;sky
     曇;cloudy
     曇り;cloudy
-    降り;falls
+    降り;to fall
     悪;evil
-    天;heaven's
-    晴れ;sunny, clear, nice weather
+    天;heaven
+    晴れ;sunny, clear
     晴;sunny
     天気;weather
-    悪い;bad, poor, at fault
-    作り;make, produce, cook
-    作;make, made
-    教;teach, taught
-    教え;teach
+    悪い;bad, poor
+    作り;to make, to cook
+    作;to make
+    教;to teach
+    教え;to teach
     料理;dish, food, meal
-    弾き;play (an instrument)
-    練習;practice, training
+    弾き;to play (an instrument)
+    練習;practice
     再来週;the week after next
-    再;recycled
-    弾;playing, plays, play
-    練;practice, practices
-    忙しく;busy
-    さあ;now, come on, well (then)
-    かけ;put
-    電話;phones, telephone, calls
-    館;library, museum
-    会い;meet, see, meet up
+    再;again, re-
+    弾;to play
+    練;to practice
+    忙しく;busily
+    さあ;come on, well then
+    かけ;to hang, to put
+    電話;telephone, phone call
+    館;building, hall
+    会い;to meet
     ましょうか;shall we, should we, should I
-    映画館;movie theater, cinema, the movies
-    ませんか;would you like to, (a suggestion), why don't we
-    公園;garden, park, parks
+    映画館;movie theater, cinema
+    ませんか;would you like to, why don't we
+    公園;park
     ましょう;let's, we should
     緒;cords, cord
     一緒;together
@@ -138,21 +138,21 @@ vocabulary = """
     新しく;new, newly
     長く;long, longer, for a long time
     安く;cheap, cheaply
-    高く;high up, expensive, higher
+    高く;high, expensively
     帽;cap
-    欲;wish (for)
+    欲;desire, to wish for
     帽子;hat
-    被り;wears, wear
-    被;wears, wear
-    脱ぎ;take off
-    脱;take off
-    欲しい;want, wants, wanted
+    被り;to wear (on head)
+    被;to wear (on head)
+    脱ぎ;to take off
+    脱;to take off
+    欲しい;wanted, desired
     黒;black
-    洗い;washed, wash
-    洗;wash
-    履;wear
-    履き;put on, wear
-    服;(the) clothes, outfit, (my) clothes
+    洗い;to wash
+    洗;to wash
+    履;to wear (shoes)
+    履き;to put on, to wear (shoes)
+    服;clothes, outfit
     黒い;black
     茶色い;brown
     青;blue, green
@@ -160,316 +160,316 @@ vocabulary = """
     オレンジ色;orange
     ズボン;pants, trousers, (pair of) pants
     黄;yellow
-    靴;shoes, shoe, pair of shoes
+    靴;shoes
     黄色い;yellow
-    青い;blue, pale, (a) blue
+    青い;blue
     白;white
-    赤;red, one—red
+    赤;red
     パンツ;underwear
     着;(counter for garments)
     赤い;red
     白い;white
-    近く;near, neighborhood, close
-    ない;haven't, do not, no
-    速く;quick, quickly, fast
-    遠く;the distance, far, far away
-    かかり;takes
-    遅く;late, slow, belated
+    近く;near, nearby
+    ない;not, no
+    速く;fast, quickly
+    遠く;far, distance
+    かかり;to take (time)
+    遅く;late, slowly
     近;near
     遠;far
     速;fast
-    速い;fast, rapid, quick
-    遠い;far, far away
+    速い;fast, quick
+    遠い;far
     遅;late
     図;figure, diagram
     地図;map
-    歩き;walk, walks, walk down
-    遅い;slow, late, delayed
+    歩き;to walk
+    遅い;slow, late
     空港;airport
     地下鉄;subway
-    飛行機;airplane, plane
-    自転車;bikes, bikes to, bike
-    乗り;ride
+    飛行機;airplane
+    自転車;bicycle
+    乗り;to ride
     電;electric
-    使い;use, uses
-    乗;ride
+    使い;to use
+    乗;to ride
     似;similar
     おかえりなさい;welcome back
-    おじいさん;grandpa, grandfather, old man
-    行ってきます;I'm off, I'm leaving, am going
-    おばあさん;grandmother, old lady, old woman
-    行ってらっしゃい;have a great day, have a nice day, have a good day
-    似て;resembles
-    祖;Grandmother, Grandfather, grandfather
-    親;parent, parents
-    祖父;(my) grandfather, (my) grandpa
+    おじいさん;grandfather, old man
+    行ってきます;I'm off
+    おばあさん;grandmother, old woman
+    行ってらっしゃい;have a nice day
+    似て;to resemble
+    祖;ancestor, grandparent
+    親;parent
+    祖父;grandfather
     奥;inner
-    奥さん;(your) wife, wife
+    奥さん;wife
     主;lord
-    ただいま;I'm back, I'm home
-    祖母;(my) grandmothers, (my) grandmother, grandma
+    ただいま;I'm home
+    祖母;grandmother
     在宅;at home
-    ご主人;(your) husband, husband
-    お子さん;(your) child
-    夫;(her) husband, (my) husband, (his) husband
-    妻;(her) wife, (my) wife, wives
-    おいくつ;what
-    孫;grandkid, (my) grandchildren, (my) grandchild
-    三人;three
-    戚;relative, relatives
-    おば;(my) aunt
-    息子;(my) son, (our) son, sons
-    親戚;relative, relatives
+    ご主人;husband
+    お子さん;child
+    夫;husband
+    妻;wife
+    おいくつ;how old
+    孫;grandchild
+    三人;three people
+    戚;relative
+    おば;aunt
+    息子;son
+    親戚;relative
     息;breath
-    おじ;(my) uncle
-    娘;(her) daughter, (his) daughter, (our) daughter
-    走;run
-    撮り;take
-    撮;took, take
-    走り;run, running
-    写真;image, (a) photograph, (the) photo
-    枚;(counting flat objects), sheets, sheet
-    聞き;hear, listen
-    泳ぎ;swim, swimming
-    聞;hear, listen
+    おじ;uncle
+    娘;daughter
+    走;to run
+    撮り;to take (a photo)
+    撮;to take (a photo)
+    走り;to run
+    写真;photo, photograph
+    枚;counter for flat objects
+    聞き;to hear, to listen
+    泳ぎ;to swim
+    聞;to hear, to listen
     音楽;music
-    泳;swim, swimming
-    描き;drew
-    描;draws
-    遊;play
-    遊び;play, playing, hang out
-    散歩;walks, (a) walk, walk
-    絵;(the) paintings, (a) painting, (the) drawing
-    習い;learn
-    読;reads, read
-    習;learn
-    読み;read, reading
-    歌;song, (the) song, singing
-    歌い;sing, sang
+    泳;to swim
+    描き;to draw
+    描;to draw
+    遊;to play
+    遊び;to play, to hang out
+    散歩;walk, stroll
+    絵;painting, drawing
+    習い;to learn
+    読;to read
+    習;to learn
+    読み;to read
+    歌;song
+    歌い;to sing
     手紙;letter
-    書き;write, (to) write, writes
-    見;see, watch, look at
-    書;books, book
+    書き;to write
+    見;to see, to watch
+    書;book, to write
     映画;movie
-    閉;close, closed
-    電気;(a) light, (the) lights, (the) light
-    つけ;turn on
-    立ち;stand
-    閉め;(to) shut
-    食べて;eating, ate (and), eat
-    書いて;written, writing, write down
-    座;sit
-    開;opened, opens
-    飲んで;drink (and), (after) drinking, take
-    座り;sit
-    開け;opened (and), open
-    帰;return
+    閉;to close
+    電気;light, electricity
+    つけ;to turn on
+    立ち;to stand
+    閉め;to close, to shut
+    食べて;eating
+    書いて;writing
+    座;to sit
+    開;to open
+    飲んで;drinking
+    座り;to sit
+    開け;to open
+    帰;to return
     浴;bathroom, bath
-    読んで;(by) reading, read
-    帰り;go home, leave, return
-    浴び;took
-    すぐ;soon, then, in a minute
+    読んで;reading
+    帰り;to go home, to return
+    浴び;to bathe, to shower
+    すぐ;soon, immediately
     洗濯;laundry
-    それから;after that, and then, then
-    して;playing, wearing, took out (and)
-    掃除;cleaning, clean, sweeping
-    濯;wash, washed, washing
+    それから;after that, then
+    して;doing
+    掃除;cleaning
+    濯;to wash, to rinse
     平;flat
     平日;weekday
     一昨日;the day before yesterday
     冷蔵庫;refrigerator, fridge
-    隅;(the) corner, corner
-    片;one
+    隅;corner
+    片;piece, one side
     低;low
-    低い;weak, lower, low
+    低い;low
     汚い;dirty
     汚;dirty
-    産;products, souvenirs
-    湾;bay, bays
+    産;product, souvenir
+    湾;bay
     長い;long, lengthy
-    お土産;souvenir, souvenirs
-    片隅;(the) corner, corner
+    お土産;souvenir
+    片隅;corner
     長;long
-    鏡;(a) mirror, (the) mirror, (the) mirrors
+    鏡;mirror
     旅;trip, journey, travel
-    布団;futon, futons
+    布団;futon
     冊;(counter for books)
-    本棚;bookshelves, bookcase, bookshelf
+    本棚;bookshelf
     韓;Han, Korean
-    旅行;traveling, travel, (the) trip
-    一人;one (person), alone, one
+    旅行;travel, trip
+    一人;one person, alone
     後ろ;back, behind
-    韓国;(South) Korean, (South) Korea, korea
+    韓国;South Korea
     時々;sometimes, now and then
-    棚;shelf, shelves, cabinet
+    棚;shelf
     隣;next to, next door, neighboring
-    横;Lie, lying, lie
+    横;side, horizontal
     下;bottom, down, below
     明;bright
     曜;day
-    忙;busy, occupied
+    忙;busy
     友達;friend
     明後日;the day after tomorrow
-    忙しい;busy, occupied
+    忙しい;busy
     昨;last
-    勉強;study, your studies, studying
-    ました;has (done), did, was
-    話し;speaks, talk, talks
-    し;play, have, four
-    買い;buy, get
-    仕事;(the) job, work, tasks
-    仕;job, work, working
-    買;buy
-    来;come, next
-    働;worked, working
-    働き;functions, work, function
-    嫌い;do not like, dislike
+    勉強;study
+    ました;did, was
+    話し;to speak, to talk
+    し;to do, four
+    買い;to buy
+    仕事;work, job
+    仕;work
+    買;to buy
+    来;to come, next
+    働;to work
+    働き;to work
+    嫌い;to dislike
     安;cheap
-    嫌;hate
+    嫌;to hate
     甘;sweet
-    甘い;sweet, sweeter
-    好;like
-    じゃない;do not, am not, I'm not
+    甘い;sweet
+    好;to like
+    じゃない;not, am not
     冷たい;cold
     熱;heat, fever
     冷;cold
-    食堂;dining room, (the) cafeteria, dining hall
-    堂;Hall
+    食堂;dining hall, cafeteria
+    堂;hall
     熱い;hot
-    昼;day, daytime
+    昼;noon, daytime
     晩;evening, night
-    ご;(polite), five
-    お兄さん;big brother, older brothers, older brother
-    お姉さん;(older) sister, big sister, (your) sister
-    両親;parents, (my) parents, folks
-    兄弟;brother, brothers, siblings
+    ご;polite prefix, five
+    お兄さん;older brother
+    お姉さん;older sister
+    両親;parents
+    兄弟;siblings, brothers
     族;tribe
-    あなた;you, you'll
-    家族;(the) families, (the) family, (our) family
+    あなた;you
+    家族;family
     供;child
-    妹;(my) (little) sisters, (my) (little) sister, sister
-    弟;(my) (little) brother, (my) (younger) brother, (my) (little) brothers
+    妹;younger sister
+    弟;younger brother
     姉妹;sisters, siblings
-    兄;(my) (big) brother, (my) (older) brother, (big) brothers
-    子供;(my) kids, (my) child, (the) child
-    女;woman, lady
-    彼女;girlfriend, she, her
+    兄;older brother
+    子供;child, children
+    女;woman
+    彼女;she, her, girlfriend
     彼ら;they, them
     彼;he, him
-    姉;(my) (big) sister, sister, (my) (elder) sister
+    姉;older sister
     誰;who
     二個;two
-    一個;an, a, one
+    一個;one
     九つ;nine (things)
     直美;Naomi (female name)
     健太;Kenta (male name)
     生;raw, live, life
     高校;high school
     小学;elementary school
-    年生;grade, grader
-    中学;middle school, junior high school
+    年生;grade
+    中学;middle school
     そう;so, right, true
-    留;studying, detained
-    違い;(the) difference, (the) differences
+    留;to study, to stay
+    違い;difference
     違;wrong
     外国人;foreigner
-    留学;studying abroad, study abroad
-    申;saying
-    申し;called
-    住んで;live, lived, living
+    留学;study abroad
+    申;to say
+    申し;to say (humble)
+    住んで;living
     大阪;Osaka
-    住;living, lived, live
-    歳;the age of, years of age, years old
-    椅;chair, chairs
-    机;desk, desks, (the) desk
-    椅子;chair, chairs
-    ソファー;sofas, sofa, couch
-    犬;dog, dogs
-    鳥;(the) bird, (a) bird, birds
-    猫;cat, cats
-    子;kid, child, children
-    羽;wings, (counter for birds), feathers
+    住;to live
+    歳;years old
+    椅;chair
+    机;desk
+    椅子;chair
+    ソファー;sofa, couch
+    犬;dog
+    鳥;bird
+    猫;cat
+    子;child
+    羽;counter for birds, wing
     窓;window
-    い;be
-    庭;(a) yard, (the) garden, (my) garden
+    い;to be
+    庭;garden, yard
     寝室;bedroom
-    台所;kitchen, kitchens, (the) kitchen
-    風呂;(the) bath, (a) bath, (the) bathtub
-    部屋;rooms, room
-    起;cause, wake up
-    あり;has, are, is
+    台所;kitchen
+    風呂;bath, bathtub
+    部屋;room
+    起;to wake up
+    あり;to have, to exist
     零時;midnight
     零;zero
-    起き;get up, happen
-    午前;in the morning, a.m., a.m
-    行き;went (and), (will) go
-    行;line
+    起き;to get up
+    午前;a.m., morning
+    行き;to go
+    行;line, to go
     会社;company
-    寝;go to sleep, go to bed, sleep
+    寝;to sleep, to go to bed
     へ;to, for
     ちょうど;sharp, precisely, exactly
-    ゼロ;zero, zeros
+    ゼロ;zero
     ごちそうさまでした;thank you for the meal
     牛乳;milk
-    野菜;vegetables, vegetable, veggies
+    野菜;vegetable
     ません;(I) do not, do not, will not
-    どれ;which (one), which
-    食べ;eat, will eat, eating
+    どれ;which one
+    食べ;to eat
     ます;(polite form), will...
-    飲み;drink, drinks, take
+    飲み;to drink
     僕;I, me
     ありがとう;thank you
     英語;English
-    お;hot springs
-    ガム;chewing gum, gum
+    お;polite prefix
+    ガム;gum
     どうぞ;here you are, go ahead, please
-    肉まん;pork bun, pork buns
+    肉まん;pork bun
     はだいじょうぶです;are okay, is okay
     おべんとう;bento, lunchbox, boxed lunch
-    あたためましょうか;warm up
+    あたためましょうか;shall I warm it up
     おはし;chopsticks
-    おします;press
+    おします;to press
     きって;stamps, stamp, cut
     なっとう;natto, fermented soybeans
-    お金;money, cash
-    ひきだします;withdraw
-    しょうしょうおまちください;please wait a moment., Please wait a moment.
+    お金;money
+    ひきだします;to withdraw
+    しょうしょうおまちください;please wait a moment
     スキャンもできますか;can I also scan
-    わかりました;understood, understand, understands
+    わかりました;understood
     コピーき;copy machine
     いくつか;a few, some, several
     の前の;in front of
-    できます;knows, know, can do
-    開いています;is open, throws, throw
-    コピーします;copy, make a copy
+    できます;can do
+    開いています;is open
+    コピーします;to copy
     買いたい;want to buy
     はんがく;half price
-    会計;(the) invoice, (the) bill, check
-    びき;(counter for animals), off
-    使います;use, will use, take
-    ふせん;sticky notes
-    カレンダー;calendars, calendar
+    会計;bill, check
+    びき;counter for animals
+    使います;to use
+    ふせん;sticky note
+    カレンダー;calendar
     大きくて;big and
     安くて;cheap and
     かるくて;lightweight and
-    デザイン;design, designs
+    デザイン;design
     はさみ;scissors
     高くて;tall and, expensive and
     ホチキス;stapler
-    シャーペン;mechanical pencil, mechanical pencils
+    シャーペン;mechanical pencil
     色えんぴつ;colored pencil
     かわいくて;cute and
-    けしゴム;erasers, eraser
+    けしゴム;eraser
     小さくて;small and
     ぶんぼうぐ;stationery
     ところで;by the way
     何日;what date, which day
-    店;store, shop, stores
+    店;store, shop
     スペイン料理;Spanish food
-    見に行きます;go to see
-    二十日;twentieth, twenty days, on the twentieth
+    見に行きます;to go see
+    二十日;twentieth day, twenty days
     来週の;next
-    食べに行きます;go to eat
+    食べに行きます;to go eat
     ゴルフ;golf
     たっきゅう;table tennis
     スポーツようひん;sporting equipment
@@ -481,17 +481,17 @@ vocabulary = """
     めんきょ;license
     つり;fishing
     しゅみ;hobby
-    持っています;have, has
+    持っています;to have
     うんてんができます;can drive
     しあわせ;happiness, happy
     名前;first name, name
-    スペイン;Spain, Spanish
-    楽しい;pleasant, enjoyable, a pleasure
-    ぜひ;please, do, certainly
+    スペイン;Spain
+    楽しい;fun, enjoyable
+    ぜひ;by all means, certainly
     らいがっき;next semester
     えんげき;theater
-    スケジュール;program, schedule
-    えらびます;chose, choose
+    スケジュール;schedule
+    えらびます;to choose
     りゅうがくせい;international student
     語;language, word
     日本語;Japanese
@@ -505,146 +505,146 @@ vocabulary = """
     けいざいがく;economics
     週に;a week
     せいぶつがく;biology
-    けど;but, even though
-    十一人;eleven, eleven people
+    けど;but
+    十一人;eleven people
     こんがっき;this semester
     何人;how many (people)
-    うけます;am going to take
+    うけます;to take (a class)
     こみます;get crowded, gets crowded
     そうですね;right
-    チェックします;check
+    チェックします;to check
     しずかで;quiet and
-    にぎやかで;lively
+    にぎやかで;lively and
     さいこう;awesome
-    場所;site, spot, places
-    少し;slightly, a bit, a slight
+    場所;place, spot
+    少し;a little, a bit
     ベジタリアン;vegetarian
     シェフ;chef
-    きれいで;beautiful, Beautiful
-    しんせんで;fresh, Fresh
+    きれいで;beautiful and
+    しんせんで;fresh and
     ヘルシー;healthy
     おくじょう;rooftop
-    おしゃれで;stylish
-    マンション;condominium, high rise apartment
-    すてきで;nice
-    にあります;lies, is, is on
+    おしゃれで;stylish and
+    マンション;condominium, apartment
+    すてきで;nice and
+    にあります;is located
     ブラジル料理;Brazilian food
-    サイト;site, website, sites
-    人気;popularity, popular
-    日本料理;cuisine
-    しらべます;will look up
-    いざかや;Japanese-style pub, Japanese-style pubs
-    夜の;night, Nighttime
-    見に行きましょう;Let's go see, let's go see
+    サイト;website
+    人気;popular, popularity
+    日本料理;Japanese cuisine
+    しらべます;to look up
+    いざかや;Japanese-style pub
+    夜の;nighttime
+    見に行きましょう;let's go see
     いいですね;sounds good
     タワー;tower
-    あそびに行きましょう;Let's go play, let's go play
+    あそびに行きましょう;let's go hang out
     イヤリング;earring
     ショッピングモール;mall
     ボウリング;bowling
-    買いに行きませんか;Shall we go to buy, shall we go to buy
-    飲みに行きませんか;shall we go to drink
+    買いに行きませんか;shall we go buy
+    飲みに行きませんか;shall we go drink
     パフェ;parfait
     後;later, after, the rest
     キャラメル;caramel
     食べに行きましょう;let's go eat
     ゲームセンター;arcade
     見たいです;want to see
-    学生;student, students, (a) student
-    見に行きませんか;won't you go to see, Won't you go to see
+    学生;student
+    見に行きませんか;shall we go see
     南;south
     ジャンル;genre
     いけぶくろ;Ikebukuro
     かなしい;sad
     じょゆう;actress
-    十日;tenth, ten days
+    十日;tenth day, ten days
     かしゅ;singer
-    つまらなかったです;was boring, were boring
-    スピーチ;speech, speeches
-    ひどい;bad, dreadful, worse
+    つまらなかったです;was boring
+    スピーチ;speech
+    ひどい;terrible, awful
     あたたかくなかった;was not warm
     へん;weird
-    お酒;alcohol, rice wine, alcoholic drinks
-    ひくい;low, lower
-    しんせき;relatives
-    ゲスト;guests
+    お酒;alcohol, sake
+    ひくい;low
+    しんせき;relative
+    ゲスト;guest
     しんぷ;bride
     うつくしい;beautiful
-    あいさつします;greets
+    あいさつします;to greet
     カーペット;carpet
-    かいじょう;venue, stadium
-    デコレーション;decorations
-    色;color, colored, colors
+    かいじょう;venue
+    デコレーション;decoration
+    色;color
     花;flower
     けっこんしき;wedding
-    六日;sixth, six days
-    リムジン;limo
+    六日;sixth day, six days
+    リムジン;limousine
     おととい;the day before yesterday
     しんろう;groom
     半分;half
-    とろとろ;nice and gooey
-    多い;a lot of, lots of, many
+    とろとろ;gooey, creamy
+    多い;many, a lot
     マヨネーズ;mayonnaise
-    いただきます;take (polite), get (polite), let's eat
-    ソーセージ;sausage, sausages
+    いただきます;let's eat, bon appetit
+    ソーセージ;sausage
     ブロッコリー;broccoli
     スペシャル;special
     ハンバーグ;hamburg steak
     きゅうり;cucumber
-    にします;I'll have, will have, makes
+    にします;I'll have
     ドレッシング;dressing
     レタス;lettuce
     ぶどう;grape
     ドリンクバー;self-service drink bar
     ようしょく;Western-style food
-    ファミレス;diner
+    ファミレス;family restaurant
     オムライス;omelet rice
     おごり;treat
-    どちらがいいですか;prefer
+    どちらがいいですか;which do you prefer
     ロッカールーム;locker room
     きたない;dirty, foul
-    きがえます;am going to change, will change
+    きがえます;to change clothes
     かきごおり;shaved ice
     レモン;lemon
-    ストロー;straw, straws
+    ストロー;straw
     サーフィン;surfing
     ばしょ;place, spot
-    もってきます;bring
+    もってきます;to bring
     ひやけどめ;sunscreen
-    いちばん近い;the closest, closest
-    ので;because, that, as
+    いちばん近い;closest, nearest
+    ので;because
     サングラス;sunglasses
-    近い;near, close, nearer
+    近い;near, close
     今週の;this
     どこか;some, something, somewhere
     八日;eighth, eight days
-    海に行きます;go to the sea
+    海に行きます;to go to the sea
     よなか;late at night
     おさけ;alcohol
-    けいたい;cell phone, cell phones, phone
-    たばこをすいます;smoke
+    けいたい;cell phone
+    たばこをすいます;to smoke
     これから;from now on
     サイクリング;cycling
     どれぐらい;how often
-    きんトレをします;lift weights
+    きんトレをします;to lift weights
     ファーストフード;fast food
     あげもの;fried food
-    回;time, times, episode
-    一か月に;a month
+    回;time, counter
+    一か月に;per month
     あぶらっこい;oily
     ヨーグルト;yogurt
     にんじん;carrot
     一日に;per day, daily, a day
     のど;throat
     おなか;stomach
-    インフルエンザ;the flu
-    よやく;appointment
-    一回;once, one time
+    インフルエンザ;flu
+    よやく;reservation, appointment
+    一回;once
     きっと;must be, for sure, surely
-    アプリ;app, apps
-    ざんねん;shame, disappointing, sorry
-    もんだい;questions, question, problem
-    わかれます;am going to break up
+    アプリ;app
+    ざんねん;unfortunate, disappointing
+    もんだい;problem, question
+    わかれます;to break up
     だけ;only, just, alone
     晩ご飯;dinner
     メイン;main dish
@@ -654,85 +654,85 @@ vocabulary = """
     おもしろくなかった;not interesting
     ゆか;floor
     えんぎ;performance, acting
-    シーン;scene, scenes
+    シーン;scene
     おばけやしき;haunted house
-    れつ;line
-    こわくなかった;was not very scary, was not scary
+    れつ;line, queue
+    こわくなかった;was not scary
     六月;June
     こんでいました;was crowded
     たのしくなかった;was not fun
-    七日;seventh, seven days
+    七日;seventh day, seven days
     今回;this time
     さいあく;the worst
-    になりたいです;wants to be, want to become
+    になりたいです;want to become
     ボクシング;boxing
     ジョギング;jogging
-    たいかい;competition
+    たいかい;competition, tournament
     まんがか;manga artist
-    かっこよかった;was good-looking
-    高校生;high school student, high school students
+    かっこよかった;was cool
+    高校生;high school student
     びじゅつ;art
     せいふく;uniform
-    きびしい;harsh, stern, strict
+    きびしい;strict
     中学生;middle school student
-    よかった;I am glad, better, I'm glad
-    学校;school, schools
+    よかった;was good, glad
+    学校;school
     べんきょう;studying
-    小学生;schoolchildren, elementary school student
+    小学生;elementary school student
     すいえい;swimming
     たいいく;PE, P.E.
-    ならいます;learn, learns
-    ようちえん;kindergarten's, kindergarten, Kindergarten
-    こうがい;suburb, suburbs
-    とき;when (I'm), when, moment
-    えをかきます;draw (a picture), draws (a picture)
+    ならいます;to learn
+    ようちえん;kindergarten
+    こうがい;suburb
+    とき;when, time
+    えをかきます;to draw a picture
     ほかの;other, another
     帰りたかったです;wanted to go home
-    じゃなかったです;weren't, wasn't
+    じゃなかったです;was not
     とまりたくない;don't want to stay
     わるい;bad, poor
     朝ご飯;breakfast
     シリアル;cereal
-    くだもの;fruit, fruits
+    くだもの;fruit
     ベタベタ;sticky
-    しんせんじゃなかったです;were not fresh, was not fresh
+    しんせんじゃなかったです;was not fresh
     シャンプー;shampoo
-    ありませんでした;there was no, there weren't, there was not
+    ありませんでした;there was not
     きれいじゃなかったです;was not clean
-    トイレ;(a) restroom, (a) toilet, (the) toilet
+    トイレ;restroom, toilet
     ぬるい;lukewarm
     六階;sixth floor
     ゴキブリ;cockroach
     カーテン;curtain
-    しずかじゃなかったです;was not quiet, were not quiet, was not very quiet
-    うすい;bland, thin, mild
+    しずかじゃなかったです;was not quiet
+    うすい;bland, thin
     西;west
-    四日間;four days, four days long
-    ゴミ;waste, trash, garbage
+    四日間;four days
+    ゴミ;trash, garbage
     シャトルバス;shuttle
     こうこく;ad
-    なおります;recover
+    なおります;to recover
     やっきょく;pharmacy
-    しばらく;(for) a moment, (for) some time, for a while
-    ぬります;apply
-    きず;cut, cuts
-    うで;arm, arms
-    は痛いですか;painful
+    しばらく;for a while
+    ぬります;to apply
+    きず;cut, wound
+    うで;arm
+    は痛いですか;does it hurt
     くび;neck
-    目;eye, eyes
-    sns;article, profile
-    ほとんど;hardly (any), little, hardly (ever)
-    でんきをつけます;turn on the lights
+    目;eye
+    sns;social media
+    ほとんど;hardly, almost
+    でんきをつけます;to turn on the light
     ストレス;stress
     ねませんでした;didn't sleep
     あたま;head
-    痛い;sore, aches, ouch
+    痛い;painful, hurts
     が痛いです;hurts
-    入れます;am going to make, puts, put
+    入れます;to put in, to make
     かぜ;wind, a cold, cold
     どうしましたか;what happened, what's wrong
     クリニック;clinic
-    ちょっと;slightly, a moment, briefly
+    ちょっと;a little, a moment
     よやくを入れます;will make a reservation
     てづくりの;homemade
     ダイニング;dining room
@@ -742,20 +742,20 @@ vocabulary = """
     かわいかった;were cute
     ソファ;sofa, couch
     かぐ;furniture
-    ペット;pet, pets
+    ペット;pet
     間;for, while, between
     たな;shelf
     カラフル;colorful
-    ドア;door, doors
+    ドア;door
     だんなさん;husband
     大きかった;was big
     かべ;wall
-    スリッパ;slipper
+    スリッパ;slippers
     おくさん;wife
     げんかん;entryway
-    午後;afternoon, p.m, (in the) afternoon
+    午後;afternoon, p.m.
     ひろかった;was spacious
-    はきます;wears, wear, put on
+    はきます;to wear, to put on
     だれの;whose
     東;east
     もん;gate
@@ -763,12 +763,12 @@ vocabulary = """
     今月;this month
     ひきだし;drawer, withdraw
     スプーン;spoon
-    ちゃわん;rice bowls, bowl, rice bowl
+    ちゃわん;rice bowl
     こむぎこ;flour
     グラム;gram
     さとう;sugar
     はいりません;would you like to join
-    はいりますか;need
+    はいりますか;do you need
     八つ;eight
     バター;butter
     肉;meat
@@ -779,29 +779,29 @@ vocabulary = """
     がいります;need
     たまねぎ;onion
     昼ご飯;lunch
-    おなかがすきました;am hungry, is hungry, are hungry
+    おなかがすきました;am hungry
     シチュー;stew
-    バイク;motorcyles, motorcycle, motorbike
+    バイク;motorcycle, motorbike
     きんじょの人;neighbor
     かいてき;comfortable
     たまに;occasionally
     大好き;really like, love, loves
     バイト;part-time job
-    入ります;enter, enters
+    入ります;to enter
     フランスご;French
     せいせき;grades
     がいこくご;foreign language
-    ダメ;bad, hopeless, not good
+    ダメ;no good
     かだい;assignment
-    レポート;report, reports
+    レポート;report
     毎朝;every morning, each morning
     せいかつ;living, life
-    まあまあ;now, now, there, there, alright
-    どこの大学;which university, Which university
-    年;years, age, year
-    イタリア;Italy, Italian
+    まあまあ;so-so, alright
+    どこの大学;which university
+    年;year
+    イタリア;Italy
     ぶんがく;literature
-    りゅうがくします;am going to study abroad
+    りゅうがくします;to study abroad
     ブーツ;boot
     よ;... won't you, ... you know
     サンダル;sandals
@@ -834,78 +834,78 @@ vocabulary = """
     しんせん;fresh
     たたみ;traditional flooring
     入口;entrance
-    ぬぎます;take off, remove
+    ぬぎます;to take off, to remove
     りっぱ;admirable, splendid, magnificent
     もり;forest
     まわり;surrounding area, surrounding
-    さんぽします;take walks, go walking, go on walks
+    さんぽします;to take a walk
     むら;village
     りょかん;ryokan
-    二日間;for two days
+    二日間;two days
     十一月;November
     みずうみ;lake
-    マグカップ;mug, mugs
+    マグカップ;mug
     今年;this year
     パートナー;partner
-    ケース;case, cases
+    ケース;case
     やっつ;eight
-    そふ;grandfather, grandfathers
-    もらいます;get, (will) get, (will) receive
+    そふ;grandfather
+    もらいます;to receive
     かわ;leather
     お茶;(green) tea, tea
     ハンカチ;handkerchief
     ベルト;belt
-    そぼ;grandmother, grandmothers
+    そぼ;grandmother
     にんぎょう;doll
-    おい;nephew, nephews
+    おい;nephew
     タブレット;tablet
     めい;niece
     えほん;picture book
     毎年;every year
-    あげます;give, am going to give, (will) give
+    あげます;to give
     スキル;skill
     べつの;different
-    しょうかいします;introduce you to, will introduce you to, introduce
-    がんばります;will do my best, will work hard, try my best
+    しょうかいします;to introduce
+    がんばります;to do one's best
     インスタント;instant
     おなじ;same
     きれいじゃない;not clean
     毎日;every day, daily
-    まずい;taste bad, bad, tastes bad
+    まずい;bad-tasting
     の人;person
     話したくないです;don't want to talk
-    まじめ;hard-working
-    おこります;gets angry, get angry
-    私たちの;our, ours, we
+    まじめ;hard-working, serious
+    おこります;to get angry
+    私たちの;our
     十階;tenth floor
     オフィス;office
-    こわれます;break, breaks
-    ひろくない;isn't spacious
+    こわれます;to break
+    ひろくない;not spacious
     今の;last, current
     おそくまで;late
     よくない;not good, do not ... good
     やめたいです;want to stop
-    飲みませんでした;did not drink
+    飲みませんでした;didn't drink
     にがい;bitter
-    りんご;apples, apple
+    りんご;apple
     昨日;yesterday
     げんきになります;get better
     ビタミン;vitamin
     おかゆ;rice porridge
     くすり;medicine
-    食べませんでした;did not eat
+    食べませんでした;didn't eat
     ティッシュ;tissue
     マスク;mask
-    一日中;all day, all day long
+    一日中;all day
     まど;window
     ぜんぜん;(not) at all, (not) one bit
-    あけます;open
-    行きませんでした;did not go
+    あけます;to open
+    行きませんでした;didn't go
     ノート;notebook
-    メールします;emails, text
-    かります;borrow
-    電話します;call, calls
-    しませんでした;did not, did not do
+    メールします;to email, to text
+    かります;to borrow
+    電話します;to call
+    しませんでした;didn't do
     ねつ;fever
     の中で;inside, within, among
     あらし;stormy
@@ -915,21 +915,21 @@ vocabulary = """
     キーホルダー;keychain
     マグネット;magnet
     ギフトショップ;gift shop
-    フェンス;fence, fences
+    フェンス;fence
     やぎ;goat
     ハンドジェル;hand sanitizer
     うさぎ;rabbit
-    なでます;pet
+    なでます;to pet
     ベンチ;bench
     スムージー;smoothie
     さる;monkey
     上;on top of, atop, up
     わたあめ;cotton candy
-    きりん;giraffe, giraffes
+    きりん;giraffe
     とり;bird
-    あし;leg
-    五日;fifth, five days
-    週末;weekends, (the) weekend, weekend
+    あし;leg, foot
+    五日;fifth day, five days
+    週末;weekend
     パンダ;panda
     うえの;Ueno
     あかちゃん;baby
@@ -937,17 +937,17 @@ vocabulary = """
     来年;next year
     いけ;pond
     もう一つ;one more
-    やっと;barely, at last, finally
+    やっと;finally, at last
     やきそば;stir-fried noodle
     やたい;food stall
     じこ;accident
-    とまります;stay, will stay, stops
+    とまります;to stay, to stop
     電車;trains, train
     八分;eight minutes
     もち;mochi, hold, rice cake
     今週;this week
-    花見;flower-viewing, see the cherry blossoms, cherry blossom viewing
-    花見をします;going cherry blossom viewing
+    花見;cherry blossom viewing
+    花見をします;to go cherry blossom viewing
     かいがい;overseas
     そふぼ;grandparents
     一週間;one week, per week, a week
@@ -955,7 +955,7 @@ vocabulary = """
     ミニゴルフ;mini-golf
     三日間;three days long
     何日間;how many days
-    けっこう;quite, quite a bit, no thank you
+    けっこう;quite, no thank you
     食べほうだい;all-you-can-eat
     ロブスター;lobster
     ご飯;food, rice, meal
@@ -964,13 +964,13 @@ vocabulary = """
     みずぎ;swimsuit
     でした;were, was, had
     しま;island
-    クルーズ;cruise, cruises
+    クルーズ;cruise
     みなと;port
     ふくおか;Fukuoka
     ターミナル;terminal
     にしぐち;west exit
     パンや;bakery
-    おくれます;will be late
+    おくれます;to be late
     たち;and the others
     いません;is (not), not, (is) not (there)
     私たち;we, us
@@ -979,41 +979,41 @@ vocabulary = """
     六分;six minutes
     おそい;slow, late
     アレックス;Alex
-    つきます;will arrive, going to arrive
-    今から;now, just now
+    つきます;to arrive
+    今から;from now
     三分;three minutes
     一分;one minute
-    乗ります;ride, take
-    でます;leave, am leaving, exit
+    乗ります;to ride, to take
+    でます;to leave, to exit
     しんじゅく;Shinjuku
-    たくさんの;many, a lot of, of
-    みんな;you guys, you all, all
+    たくさんの;many, a lot of
+    みんな;everyone
     よてい;schedule, scheduled to, plans
     しょうせつ;novel
     あそびたいです;want to play
-    したいです;want to do, want to play
+    したいです;want to do
     したくないです;don't want to do
-    後で;later, after, afterwards
-    いたいです;want to be, hurts, hurt
+    後で;later, afterwards
+    いたいです;hurts
     もうすこし;more, a bit longer
     キャンセルします;going to cancel
-    会いたくないです;see, meet
+    会いたくないです;don't want to meet
     ねました;went to sleep, slept
     ゆっくりしたいです;want to relax
     バナナ;banana
-    行きたくないです;do not want to go
+    行きたくないです;don't want to go
     食べたいです;want to eat
     ねたいです;want to sleep
     ブランケット;blanket
     でたくないです;don't want to get out
-    リモコン;remote, controller, controllers
-    アラーム;alarms, alarm
-    今;this, now, just
+    リモコン;remote control
+    アラーム;alarm
+    今;now
     おきたくないです;don't want to get up
     ねむい;sleepy
-    そろそろ;soon, shortly, in a bit
-    かたづけます;(will) clean up, going to tidy up
-    帰ります;am going home, goes home, am going back
+    そろそろ;soon, shortly
+    かたづけます;to clean up, to tidy up
+    帰ります;to go home, to return
     ひさしぶりです;long time no see
     いそがしくない;not busy
     チーズ;cheese
@@ -1022,48 +1022,48 @@ vocabulary = """
     ようじ;stuff to do
     じてんしゃ;bike
     ゆうがた;evening
-    前に;previously, ago, in front of
+    前に;before, in front of
     車;car
     さいたま;Saitama
     はたち;twenty years old
     になります;will be, becomes, become
-    四日;fourth, four days, 4th
+    四日;fourth day, four days
     三月;March
     みかん;mandarin oranges
     スキー;skiing, ski, skis
     二月;February
     スノボ;snowboarding
-    たのしくない;aren't fun
+    たのしくない;not fun
     スケート;skating, skate, ice skating
     なべ;hot pot
     くらくない;not dark
     一月;January
     さつまいも;sweet potato
-    さむくない;not cold, not very cold
+    さむくない;not cold
     だんぼう;heater
-    あつくない;not hot, not very hot
+    あつくない;not hot
     夜;night, nights, evening
     すいか;watermelon
-    つけます;put on, turns on, turn on
+    つけます;to turn on, to put on
     さくら;cherry blossoms
     四月;April
-    さきます;bloom, blooms, will bloom
-    住んでいます;live, lives
+    さきます;to bloom
+    住んでいます;to live
     こんど;next time
     八千;eight thousand
-    ポイントカード;rewards card, rewards cards
-    レジ;register, cash register, cash registers
+    ポイントカード;rewards card
+    レジ;register, cash register
     キラキラ;sparkle, glisten, sparkly
     マフラー;scarf
-    アクセサリー;accessories, jewelry, accessory
+    アクセサリー;accessory, jewelry
     右;right
-    まがります;turn, turns
+    まがります;to turn
     レディース;women's, women
     左;left
     ふわふわ;fluffy
     上がります;go up
     メンズ;men's, men
-    まず;first, first of all, bad
+    まず;first, first of all
     パーカー;hoodie
     まっすぐ;straight
     むらさき;purple
@@ -1071,7 +1071,7 @@ vocabulary = """
     ボロボロ;worn-out
     ジーンズ;jeans
     セーター;sweater
-    クラスメイト;classmates, classmate
+    クラスメイト;classmate
     ふくや;clothing store
     えんぴつ;pencil
     ショッピングセンター;center
@@ -1079,65 +1079,65 @@ vocabulary = """
     ドラッグストア;drugstore
     ふべん;inconvenient
     ぎんこう;bank
-    しんせつ;nice, kind
+    しんせつ;kind
     ゆうびんきょく;post office
-    しまります;close, closes
+    しまります;to close
     スタジアム;stadium
     アメフト;football
-    先生;Mr., Miss, Mister
+    先生;teacher, Mr., Ms.
     木;tree, Thursday, wood
     こうこう;high school
     いなか;countryside
     れきし;history
-    大学;university, college, universities
-    そつぎょうします;graduate
+    大学;university
+    そつぎょうします;to graduate
     はいります;need
     グッズ;merch
     また;again, back, see you ...
     つかれました;was tired, am tired, is tired
-    もう;yet, now, already
+    もう;already, yet
     買いたいです;want to buy
     サイン;signature, signatures, autograph
     ペン;pen
     話したいです;want to talk
     ひがしぐち;east exit
-    ならびます;(will) wait in line, (will) form a line, (will) queue
+    ならびます;to wait in line
     飲みたいです;want to drink
     ききたいです;want to hear
     外;out, outside
-    もどります;will return, return
+    もどります;to return
     ステージ;stage
     まんなか;middle
     すわりたい;want to sit
     でかけたいです;want to go out
     アーティスト;artist
     今夜;tonight
-    行きたいです;would like to go, want to go, wants to go
+    行きたいです;want to go
     会いたいです;want to meet
-    レシート;receipt, receipts
-    レジぶくろ;shopping bag, shopping bags
+    レシート;receipt
+    レジぶくろ;shopping bag
     でんち;batteries
     おもい;heavy
     グレー;gray
     ワイヤレス;wireless
     ケーブル;cable
-    スピーカー;speakers, speaker
-    ひかります;lights up
+    スピーカー;speaker
+    ひかります;to light up
     キーボード;keyboard
     万;ten thousand
     マウス;mouse
     かるい;light, lightweight
-    インチ;inches, inch
-    一万;ten thousand, 10,000
-    安い;inexpensive, cheap, cheaper
+    インチ;inch
+    一万;ten thousand
+    安い;cheap, inexpensive
     モニター;monitor
     前;ago, before, front
     ゲーミング;gaming
     今日;today
     おさら;plate
     ナイフ;knife
-    きります;going to cut
-    あるきます;walk, walking, am walking
+    きります;to cut
+    あるきます;to walk
     おもちゃ;toy
     でんきや;electronics store
     ヘッドホン;headphones
@@ -1145,21 +1145,21 @@ vocabulary = """
     カップ;cup
     フォーク;fork
     百円ショップ;hundred yen shop
-    わたります;cross
+    わたります;to cross
     ポテトチップス;chips, potato chips
     どうやって;how
     とちゅうで;on the way
     みち;path, road, street
     フライドチキン;fried chicken
-    円;circle, yen
+    円;yen
     家;house, home, homes
-    いとこ;(my) cousin, (my) cousins
+    いとこ;cousin
     タイご;Thai
     ぞう;elephant
     タイ;Thailand, Thai
     来週;next week
     れんしゅうしました;practiced
-    ピーナッツ;peanuts, (a) peanut
+    ピーナッツ;peanut
     明日;tomorrow
     すいぞくかん;aquarium
     ちば;Chiba
@@ -1168,13 +1168,13 @@ vocabulary = """
     クレープ;crepe
     はじめて;for the first time
     あそびました;played
-    行きました;went, (I) went
+    行きました;went
     先週;last week
-    食べました;ate, (I) ate, had
+    食べました;ate
     ぎんざ;Ginza
     ぶんか;culture
-    見ました;watched, saw, looked at
-    来ました;have come, came, has arrived
+    見ました;watched, saw
+    来ました;came
     先月;last month
     きょねん;last year
     かぶき;kabuki, kabuki performance, Kabuki performances
@@ -1186,7 +1186,7 @@ vocabulary = """
     タオル;towel
     うしろ;behind
     むりょう;free
-    スパ;spa, spas
+    スパ;spa
     パスワード;password
     三階;third floor
     ルームサービス;room service
@@ -1198,11 +1198,11 @@ vocabulary = """
     チェックイン;check-in
     かぎ;key
     ネット;internet
-    三日;third, three days
-    二日;two days, second, 2
-    とまりませんか;Shall we not stay
-    さがします;will look for, am going to look for
-    ぎょうざ;fried dumpling, fried dumplings
+    三日;third day, three days
+    二日;second day, two days
+    とまりませんか;shall we stay
+    さがします;to look for
+    ぎょうざ;dumpling
     おつり;change
     七つ;seven (things), seven
     ぜんぶで;in total
@@ -1213,7 +1213,7 @@ vocabulary = """
     てんいん;salesperson, waiter
     ナプキン;napkin
     マーボーどうふ;mapo tofu
-    はし;bridges, chopsticks, bridge
+    はし;chopsticks, bridge
     からい;spicy
     スープ;soup
     五つ;five (things), five
@@ -1227,23 +1227,23 @@ vocabulary = """
     タピオカティー;bubble tea
     ちゅうかがい;Chinatown
     ちゅうかりょうり;Chinese food
-    あきます;opens, open
+    あきます;to open
     シーフード;seafood
     ぎゅうにく;beef
     こしょう;pepper
-    やきます;bake, am going to bake, grill
+    やきます;to bake, to grill
     そと;outside, outdoors
     すずしい;cool
-    けしき;view
-    川;(the) river, (the) rivers, rivers
-    たのしみます;going to enjoy
-    雨;rainy, (it) rains, rain
+    けしき;scenery, view
+    川;river
+    たのしみます;to enjoy
+    雨;rain
     くらい;dark
     ピクニック;picnic
     バーベキュー;barbecue
-    一日;one day, first, a day
+    一日;first day, one day
     五月;May
-    がいいです;sounds good, sound good
+    がいいです;sounds good
     キャンプ;camping
     ハイキング;hiking
     バックパック;backpack
@@ -1255,8 +1255,8 @@ vocabulary = """
     なんびき;how many
     さんびき;three
     へや;room
-    口;mouths, (a) mouth, tastes
-    トマト;tomato, tomatoes, (a) tomato
+    口;mouth
+    トマト;tomato
     みみ;ear
     いぬ;dog
     にひき;two animals
@@ -1265,18 +1265,18 @@ vocabulary = """
     パンケーキ;pancake
     め;eye
     いっぴき;one
-    カプチーノ;cappuccinos, (a) cappuccino
+    カプチーノ;cappuccino
     にんき;popular
     どうぶつ;animal
     ねこ;cat
     チェス;chess
     ボランティア;volunteer
-    サークル;club, clubs
+    サークル;club
     ボードゲーム;board game
     キャンパス;campus
-    ルームメイト;roommate, roommates
+    ルームメイト;roommate
     りょう;dorm
-    駅;station, train station, stations
+    駅;station
     タガログご;Tagalog
     ドイツご;German
     げんご;language, languages
@@ -1294,25 +1294,25 @@ vocabulary = """
     何年生;what school year
     みなみぐち;south exit
     飲み物;beverage, drink, drinks
-    よびます;(will) call, calls, going to call
-    ゆっくりします;going to relax
+    よびます;to call
+    ゆっくりします;to relax
     ツアー;tour
     インフォメーション;information desk
     八百;800
-    はらいます;pay, going to pay, will pay
+    はらいます;to pay
     エスカレーター;escalator
     きたぐち;north exit
     三ばん;number three
-    のりかえます;switching, going to transfer, are switching
+    のりかえます;to transfer
     かいそく;rapid-service
     二ばん;number two
     オレンジ;orange
-    おります;(we) are, (will) get off, getting off
+    おります;to get off
     一ばん;number one
     きっぷうりば;ticket area
     モノレール;monorail
     三百;300, three hundred
-    のります;take, ride, getting on
+    のります;to take, to ride
     うた;song
     ワイン;wine
     ステーキ;steak
@@ -1320,16 +1320,16 @@ vocabulary = """
     ポップコーン;popcorn
     えいがかん;movie theater
     ホットドッグ;hot dog
-    よやくします;am going to reserve, book, will reserve
+    よやくします;to reserve, to book
     ブラウス;blouse
     スーツ;suit
     きます;wears, wear, comes
     うでどけい;watch
     ネックレス;necklace
     プレゼント;present
-    げんき;well, lively, fine
+    げんき;well, energetic
     たんじょうび;birthday
-    人;people, human, someone
+    人;person, people
     デート;date
     カウントダウン;countdown
     クリスマス;Christmas
@@ -1345,34 +1345,34 @@ vocabulary = """
     コミュニティーセンター;community center, Community center
     コンテスト;contest
     たいこ;taiko drum
-    食べませんか;do you want to eat, won't you eat, would you like to eat
-    チョコバナナ;chocolate covered bananas, chocolate covered banana
+    食べませんか;would you like to eat
+    チョコバナナ;chocolate banana
     食べ物;food
     おまつり;festival
     八月;August
     はなびたいかい;fireworks display
-    あそびませんか;play
-    行きませんか;do you want to go, would you like to go, why don't we go
+    あそびませんか;shall we hang out
+    行きませんか;would you like to go
     こんしゅうまつ;this weekend
-    きじ;post
+    きじ;post, article
     ブログ;blog
     ファッション;fashion
-    作ります;going to make, make, (I) make
-    書きます;will write
+    作ります;to make
+    書きます;to write
     バレエ;ballet
     レッスン;lesson
     パフォーマンス;performance
-    おどります;dance, going to dance
-    はじまります;is starting, starts, begins
+    おどります;to dance
+    はじまります;to begin, to start
     こんや;tonight
     かんじ;kanji, Chinese character, Chinese characters
     ひらがな;hiragana
-    べんきょうします;study, will study, studies
+    べんきょうします;to study
     ピアノ;piano
     九時間;nine hours
     がっき;instrument
     ギター;(a) guitar, (the) guitars, (the) guitar
-    ひきます;play, will consult, consults (a dictionary)
+    ひきます;to play, to consult (a dictionary)
     何時間;how many hours
     れんしゅう;practice
     バドミントン;badminton
@@ -1381,11 +1381,11 @@ vocabulary = """
     バー;bar
     カラオケ;karaoke
     さいご;last
-    うたいます;sing, will sing, am going to sing
+    うたいます;to sing
     クライアント;client
     プレゼン;presentation
     パソコン;computer
-    まで;through, even, before
+    まで;until, to
     ひる休み;lunch break
     しょくどう;cafeteria
     二階;the second floor
@@ -1393,29 +1393,29 @@ vocabulary = """
     フライドポテト;french fries
     トレーニング;job training
     プリンター;printer
-    から;because, starting, through
+    から;because, from
     ミーティング;meeting
     一階;street level
     うけつけ;front desk
-    よろしくおねがいします;nice to meet you, glad to work with you
+    よろしくおねがいします;nice to meet you
     何階;which floor
     ドキュメンタリー;documentary
     ポスター;poster
     はいゆう;actor
-    見ません;does not see, do not watch, does not look at
+    見ません;don't watch
     カードゲーム;card game
     むずかしい;difficult
-    しません;do not, will not, does not
+    しません;don't do
     パズル;puzzle
     バンド;band
     アニソン;anime music
     アルバム;album
-    ききません;don't really listen to
+    ききません;don't listen to
     ポップス;pop
     ノンフィクション;non-fiction
-    読みません;does not read, do not read, (never) reads
+    読みません;don't read
     フィクション;fiction
-    あまり;(not) a lot of, (not) so, (not) too
+    あまり;not very, not much
     話;talking, conversation, chat
     本や;bookstore
     セール;sale
@@ -1426,14 +1426,14 @@ vocabulary = """
     かお;face
     きいろい;yellow
     ショー;show
-    キャラクター;mascot
-    見ましょうか;should we see
+    キャラクター;character, mascot
+    見ましょうか;shall we watch
     ゴーカート;go-kart
-    ジェットコースター;rollercoaster
+    ジェットコースター;roller coaster
     すきな;favorite
     アトラクション;attraction
     こわい;scary
-    おとな;(the) adult, (the) adults, (an) adult
+    おとな;adult
     三千;3,000
     にゅうじょうりょう;admission fee
     いりぐち;entrance
@@ -1441,39 +1441,39 @@ vocabulary = """
     つまらない;boring
     はくぶつかん;museum
     ゆうえんち;theme park
-    でかけましょう;we should go out
+    でかけましょう;let's go out
     ジム;gym
-    うんどうします;exercise, am going to exercise
-    せんしゅ;athlete, athletes, player
+    うんどうします;to exercise
+    せんしゅ;athlete, player
     プロの;professional, pro
     チーム;team
     しゃしんか;photographer
     カメラ;camera
     イベント;event
-    りょこうします;travel, travels
-    とります;takes, get, going to take
+    りょこうします;to travel
+    とります;to take
     ごぜん;a.m., morning
-    うんてんします;drive
+    うんてんします;to drive
     ナビ;GPS
     うんてんしゅ;driver
-    あらいます;wash, going to wash, washes
+    あらいます;to wash
     ほんやくか;translator
-    ほんやくします;translate
+    ほんやくします;to translate
     としょかん;library
     じしょ;dictionary
-    つかいます;will use, uses
+    つかいます;to use
     マネージャー;manager
     かいしゃ;company
     どうりょう;coworker
-    しごとします;work
-    ききましょう;we should ask
+    しごとします;to work
+    ききましょう;let's ask
     水曜日;Wednesday, Wednesdays
     プロジェクト;project
     しめきり;deadline
     ななつ;seven
     むっつ;six
     おわります;ends, end
-    ききましょうか;should we ask
+    ききましょうか;shall we ask
     火曜日;Tuesday, Tuesdays
     しつもん;question
     はやく;fast, early, quickly
@@ -1483,134 +1483,134 @@ vocabulary = """
     あります;is, (they) are, have
     スミス;Smith
     山田;Yamada
-    たくさん;a lot of
+    たくさん;a lot
     じゅぎょう;class
     スペインご;Spanish
     きょうしつ;classroom
     ぶたにく;pork
     しょっぱい;salty
     コーラ;cola
-    飲みません;(I) won't drink, don't take, (I) do not drink
+    飲みません;don't drink
     ビール;beer
     とんかつ;pork cutlet
     しお;salt
     ソース;sauce
-    つかいましょう;we should use
+    つかいましょう;let's use
     なま;raw
     とうふ;(the) tofu, bean curd, tofu
-    食べません;don't eat, do not eat, will not eat
+    食べません;don't eat
     魚;fish
-    でも;but, however, neither
+    でも;but, however
     ぎゅうどん;beef bowl
     やさい;vegetable
     しょうゆ;soy sauce
     もっと;more
     スーパー;supermarket
-    卵;egg, eggs
+    卵;egg
     いっしょに;together
-    つくりましょう;we should make
-    ひま;available, bored, free
+    つくりましょう;let's make
+    ひま;free, available
     木曜日;Thursday, Thursdays
-    つくりましょうか;shall I make, should we make, should I make
+    つくりましょうか;shall we make
     パイ;pie, pies
     四つ;four (things), four
-    チョコレート;chocolate, chocolates
+    チョコレート;chocolate
     ドーナツ;donut
     二つ;two
-    いちご;strawberry, strawberries
-    クッキー;cookies, cookie
+    いちご;strawberry
+    クッキー;cookie
     三つ;three
     まっちゃ;matcha
     みどり;green
     一つ;one (thing), one
     カップケーキ;cupcake
     チーズケーキ;cheesecake
-    買いましょうか;should we buy
+    買いましょうか;shall we buy
     おかしや;pastry shop
-    がだいすきです;love, loves
+    がだいすきです;love
     あまい;sweet
     はすきですか;do ... like
     ケーキや;cake shop
-    行きましょうか;should we go, would you like to go
+    行きましょうか;shall we go
     もの;stuff
     みじかい;short
-    がたのしみです;looking forward to, am looking forward to
+    がたのしみです;looking forward to
     月曜日;Monday
-    まちます;wait for
+    まちます;to wait
     みそかつ;miso pork cutlet
     にわ;garden
     かんこう;sightseeing
     しろ;castle
     せき;seat
     べんり;convenient
-    にのります;get on, going to ride, take
+    にのります;to get on, to ride
     しんかんせん;bullet train
     なごや;Nagoya
     日本りょうり;Japanese food
     金曜日;Friday, Fridays
-    お母さん;mom, mother, (your) mom
+    お母さん;mother, mom
     すしや;sushi restaurant
     ロビー;(the) lobby
     りょうしん;parents
-    お父さん;dad, (your) dad, (your) father
-    食べましょう;we should eat
+    お父さん;father, dad
+    食べましょう;let's eat
     にく;meat
     フランスりょうり;French food
-    かえりましょう;we should return
-    休みましょう;we should rest
+    かえりましょう;let's go home
+    休みましょう;let's rest
     どうぶつえん;zoo
     ライオン;lion
-    とりましょう;we should take
+    とりましょう;let's take
     ひろば;plaza
     しゃしん;photo
     え;painting
     で;as a, under, through
-    見ましょう;let's see, let's view, let's watch
+    見ましょう;let's watch, let's see
     びじゅつかん;art museum
-    飲みましょう;let's have, let's drink
-    チケット;ticket, tickets
-    買いましょう;we should buy, let's buy
-    会います;am going to meet up, (will) meet, (is) meeting
+    飲みましょう;let's drink
+    チケット;ticket
+    買いましょう;let's buy
+    会います;to meet
     スーツケース;suitcase
     ひこうき;plane
-    会いましょう;let's meet, see you
+    会いましょう;let's meet
     りょこう;trip
     フランス;French, France
     行きましょう;let's go
-    しましょうか;shall (we), should (we)
+    しましょうか;shall we
     来月;next month
     休みの日;day off
     ガーデニング;gardening
     たのしい;fun
     りょうり;cuisine, dish, food
     買い物;shopping
-    そして;then
-    たいへん;tough, very, hard
+    そして;and then
+    たいへん;tough, hard
     ストレッチ;stretch
-    にはいります;am going to take, take, going to enroll
+    にはいります;to take (a bath), to enter
     おふろ;bath
     せんたく;laundry
     だれ;who
-    いろいろ;all sorts of
-    そうじ;cleaning, clean
-    てつだいます;help
+    いろいろ;various
+    そうじ;cleaning
+    てつだいます;to help
     しゅくだい;homework
-    何;anything, which, what
+    何;what
     がっこう;school
     かじ;chore
     あと;after
     しごと;work
-    うち;we, (my) house, home
-    かえります;am returning, will return home, returning
+    うち;home, house
+    かえります;to go home, to return
     ひとり;one
-    こども;kid, (the) child, (the) children
-    おこさん;kid, kids
+    こども;child
+    おこさん;child
     ソウル;Seoul
     かんこくご;Korean
     ふたり;two
     マレーシア;Malaysia
     えいご;English
-    おにいさん;big brother, older brothers, older brother
+    おにいさん;older brother
     いもうとさん;younger sister
     ちゅうごくご;Chinese
     ができます;know, can play
@@ -1618,7 +1618,7 @@ vocabulary = """
     日本ご;Japanese
     コーチ;coach
     オーストラリア;Australia, Australian
-    おねえさん;big sister, big sisters, older sisters
+    おねえさん;older sister
     が;(softens the tone), (indicates the subject), but
     います;is, am, has been
     はいますか;do ... have
@@ -1632,55 +1632,55 @@ vocabulary = """
     こんばん;this evening, tonight
     九月;September, (in) September
     くもり;cloudy
-    コンサート;concert, concerts
+    コンサート;concert
     あき;fall
     休み;break
     はなび;fireworks
-    あつい;hot, thick
-    プール;swimming pools, pools, pool
+    あつい;hot
+    プール;pool
     七月;July
     はれ;sunny
     なつ;summer
     日;day, the sun, (a) day
     うみ;beach
-    こうえん;park, performance, parks
+    こうえん;park
     はる;spring
     あめ;rainy
     てんき;weather
     あたたかい;warm
     ちゃんと;proper, properly, full
-    くすりを飲みます;take
-    休みます;rest, take a break, absent (from)
+    くすりを飲みます;to take medicine
+    休みます;to rest, to take a break
     きょう;today
     ちかく;nearby
-    ごかぞく;your family, family
+    ごかぞく;your family
     アレルギー;allergy
-    ごりょうしん;(your) parents, parents
+    ごりょうしん;your parents
     でんわばんごう;phone number
     何さい;how old
     〇;0, zero
     九;nine
     きゅうきゅうしゃ;ambulance
-    おねがいします;please, I need ... please
+    おねがいします;please
     びょういん;hospital
     けいさつ;police
     あぶない;dangerous
     ぐあいがわるい;unwell
-    すわります;sit, going to sit
-    だいじょうぶ;OK
+    すわります;to sit
+    だいじょうぶ;okay, fine
     どうですか;how are things, why don't, how is
     おみやげ;souvenir
     おかし;snack
     ポストカード;postcard
     ふじさん;Mt. Fuji
-    高い;tall
+    高い;tall, expensive
     山;mountain, mount, mountains
     じんじゃ;shrine
     ラーメンや;ramen shop
     ピザや;pizza shop
     はらじゅく;Harajuku
     デザート;dessert
-    あれ;hey, that (one) (over there), what
+    あれ;that (over there)
     何ですか;what (is), what are, what's
     おてら;temple
     たてもの;building
@@ -1692,44 +1692,44 @@ vocabulary = """
     時間;time, hour, hours
     分;minute, minutes
     ぐらい;about
-    かかります;take, (it) takes, (it) will take
-    はやい;fast
+    かかります;to take (time)
+    はやい;fast, early
     十分;ten minutes
-    どの;any, each, which
-    もうすぐ;soon, almost, shortly
+    どの;which
+    もうすぐ;soon, almost
     あさくさ;Asakusa
     うえのこうえん;Ueno Park
-    来ます;will be here, will come, is coming
+    来ます;to come
     つぎの;next
     つぎ;next
     よこはま;Yokohama
     バス;bus
     あきはばら;Akihabara
     しぶや;Shibuya
-    行きます;am going, are going, go
+    行きます;to go
     でんしゃ;train
     こんしゅう;this week
-    いつ;when, what time
+    いつ;when
     つくえ;desk
     せんたくき;washing machine
     れいぞうこ;fridge
-    いす;chair, chairs
-    テーブル;table, tables
+    いす;chair
+    テーブル;table
     でんしレンジ;microwave
-    ふとん;futon, futons
+    ふとん;futon
     たぶん;probably
     ほんだな;bookshelf
-    シャワー;shower, showers
+    シャワー;shower
     そうじき;vacuum cleaner
-    エアコン;air conditioning, air conditioners, air conditioner
-    ベッド;bed, beds
+    エアコン;air conditioner
+    ベッド;bed
     せまい;cramped
     リビング;living room
     キッチン;kitchen
     があります;is, there is, there are
-    アパート;apartment building, apartment, apartments
+    アパート;apartment
     ひっこします;am going to move, is going to move, move
-    まだ;still, yet, too
+    まだ;still, yet
     ひろい;spacious
     いえ;house
     れんあい;romance
@@ -1737,7 +1737,7 @@ vocabulary = """
     ほんとうですか;really
     アクション;action
     アメリカの;... of the US, American, ... of the United States
-    どんな;any, what kind of, what (sort of)
+    どんな;what kind of
     ファンタジー;fantasy
     ホラー;horror
     がすきですか;do you like
@@ -1747,7 +1747,7 @@ vocabulary = """
     日本の;Japan's, of Japan, Japanese
     がすきです;like
     ベトナム;Vietnam
-    かんこく;Korea, korean
+    かんこく;Korea
     かのじょ;she, girlfriend, her
     ちゅうごく;China
     さんは;Mr./Ms.
@@ -1756,30 +1756,30 @@ vocabulary = """
     と言います;tell, say, says
     エリカ;Erica, Erika
     言います;tell, tells, say
-    こちら;this, these, (over) here
+    こちら;this way, here
     ダニエル;Daniel
-    はしります;runs, run
-    飲みます;will have, drink, having
+    はしります;to run
+    飲みます;to drink, to take
     パスタ;pasta
     ねます;sleep, go to sleep, will go to sleep
-    シャワーをあびます;take a shower
-    メールを読みます;check emails
+    シャワーをあびます;to take a shower
+    メールを読みます;to check email
     あした;tomorrow
     らいしゅう;next week
     バレーボール;volleyball
     まいしゅう;every week
     四時;four o'clock
-    つくります;make
-    食べます;eat, am going to eat, will eat
+    つくります;to make
+    食べます;to eat
     何時に;(at) what time
-    おきます;get up, going to wake up, wake up
+    おきます;to get up, to wake up
     新聞;newspaper
     ラジオ;radio
     何時;when, what time
     いつも;always, all the time, never
     でぐち;exit
-    じはんき;vending machines, vending machine
-    コインロッカー;storage lockers
+    じはんき;vending machine
+    コインロッカー;coin locker
     ちかい;close
     カフェ;cafe
     にかい;the second floor, two
@@ -1803,31 +1803,31 @@ vocabulary = """
     どうが;video
     じゅうどう;judo
     テニス;tennis
-    話します;speaks, speak, tells
+    話します;to speak, to talk
     日曜日;Sunday
-    ゲーム;video games
+    ゲーム;video game
     からて;karate
-    でかけます;go out, am going to go out
+    でかけます;to go out
     土曜日;Saturday, Saturdays
-    買います;will buy
+    買います;to buy
     スポーツ;sports
     ヨガ;yoga
     ともだち;friend, friends
     ドラマ;drama
-    あそびます;hang out, hangs out, (I) will play
-    およぎます;swim, will swim, swims
+    あそびます;to hang out, to play
+    およぎます;to swim
     しゅうまつ;weekend
     ひとりで;by myself, by herself, alone
     アイスコーヒー;iced coffee
-    アイスクリーム;ice cream, ice creams
-    こうちゃ;black teas, black tea, tea
-    小さい;small, little
+    アイスクリーム;ice cream
+    こうちゃ;black tea
+    小さい;small
     すこし;a bit
     みそしる;miso soup
     サラダ;salad, salads
     そば;soba
     大きい;big
-    おにぎり;rice balls, rice ball, onigiri
+    おにぎり;rice ball
     よっつ;four
     ええと;um
     みっつ;three
@@ -1835,35 +1835,35 @@ vocabulary = """
     ふたつ;two
     あ;ah, oh
     ひとつ;one
-    水;water, waters
+    水;water
     レストラン;restaurant
-    ていしょく;meal set, meal sets
+    ていしょく;set meal
     うどん;udon
     てんぷら;tempura
     ジャケット;jacket
-    たかい;expensive, big, tall
+    たかい;tall, expensive
     くろい;black
     みせ;store
     ありがとうございます;thank you
     千;thousand
     いくら;how much
-    ネクタイ;tie, necktie, ties
+    ネクタイ;tie, necktie
     えん;yen
     やすい;cheap, inexpensive
     百;hundred
-    あの;those, ah, that (over there)
+    あの;that (over there)
     あおい;blue
-    いい;good, like, well
+    いい;good
     ドレス;dress
-    すてき;lovely, nice, cute
+    すてき;lovely, nice
     がほしいです;want
     スカート;skirt
     Tシャツ;t-shirt
-    新しい;new, newer
+    新しい;new
     ね;isn't it?
     ふく;clothes
-    ダサい;hideous
-    はちょっと;I don't really like, doesn't work very well, kind of
+    ダサい;ugly, uncool
+    はちょっと;not really, kind of
     さいふ;wallet
     古い;old
     ばんごはん;dinner
@@ -1881,33 +1881,33 @@ vocabulary = """
     時;o'clock
     コーヒー;coffee
     まいあさ;every morning
-    のみます;drink, drinks, (will) drink
+    のみます;to drink
     ジュース;juice
     まいにち;every day
     パン;bread
     サンドイッチ;sandwich
-    たべます;eat, eats
+    たべます;to eat
     Jポップ;J-pop
     まんが;manga
     アニメ;anime
     やきゅう;baseball
-    ざっし;magazines
-    本;books
-    読みます;read, will read, reads
+    ざっし;magazine
+    本;book
+    読みます;to read
     ニュース;news
     おんがく;music
     ロック;rock
-    ききます;listen, listens, ask
+    ききます;to listen, to ask
     ジャズ;jazz
     サッカー;soccer
     ときどき;sometimes
-    します;makes, are doing, make
+    します;to do, to make
     バスケットボール;basketball
     を;through, with, for
     よく;often
     えいが;movies
     テレビ;TV
-    見ます;watch, will watch, watches
+    見ます;to watch, to see
     おっと;my husband
     七;7, seven, seventh
     あたまがいい;smart
@@ -1932,15 +1932,15 @@ vocabulary = """
     エンジニア;engineer
     父;dad
     かぞく;family
-    母;mom, mother, my mom
+    母;mother
     まち;town, wait, city
     とても;very
-    きれい;clean
+    きれい;clean, beautiful
     しずか;quiet
     トロント;Toronto
     にぎやか;lively
-    とし;years, cities, city
-    どう;how (about), what, how
+    とし;year, city
+    どう;how
     日本;Japan, Japanese
     おおさか;Osaka
     京都;Kyoto
@@ -1952,7 +1952,7 @@ vocabulary = """
     私;I
     ようこそ;welcome
     おはようございます;good morning
-    はじめまして;nice to meet you, how do you do
+    はじめまして;nice to meet you
     おなまえは;what's your name
     かばん;bag
     中山;Nakayama
@@ -1978,24 +1978,24 @@ vocabulary = """
     に;to, in, as (a)
     いち;one, an
     やまぐち;Yamaguchi
-    おもしろい;interesting, fun, funny
-    その;the, that, its
-    かわいい;cuter, cute, pretty
+    おもしろい;interesting, funny
+    その;that
+    かわいい;cute
     あかるい;bright, cheerful, well-lit
     たなか;Tanaka
-    この;this, these
+    この;this
     なかやま;Nakayama
-    それら;they, them, those
+    それら;those
     これら;these
-    くつ;shoes, shoe
+    くつ;shoes
     しろい;white
     コート;coat
     あかい;red
     わたしの;my, mine
-    かさ;umbrella, umbrellas
-    ぼうし;hat, hats
+    かさ;umbrella
+    ぼうし;hat
     そこ;there
-    だいがく;university, college
+    だいがく;university
     えき;station, train station, stations
     デパート;department store
     ここ;here
@@ -2004,26 +2004,26 @@ vocabulary = """
     コンビニ;convenience store
     どこ;where
     ブラジルじん;Brazilian
-    イギリスじん;British
+    イギリスじん;British person
     ブラジル;Brazil
     イギリス;Britain, the United Kingdom, British
-    にほんじん;Japanese
+    にほんじん;Japanese person
     カナダ;Canada
     アメリカじん;American
     カナダじん;Canadian
     アメリカ;America, the USA, the US
-    ちいさい;small, little
+    ちいさい;small
     にほん;Japan
-    おおきい;big, large
+    おおきい;big
     か;or, is it?, that
     いいえ;no
     はい;yes
     ケーキ;cake
     ピザ;pizza
-    それ;that (one), it, that
-    これ;this (one), these, this
+    それ;that
+    これ;this
     ラーメン;ramen
-    おいしい;good, delicious, tasty
+    おいしい;delicious, tasty
     は;is, with, regarding
     カレー;curry
     またあした;see you tomorrow
@@ -2036,8 +2036,8 @@ vocabulary = """
     こんにちは;hello, hi
     けん;Ken, ticket
     がくせい;student, students
-    ひと;person, people
-    かっこいい;cool, good-looking, stylish
+    ひと;person
+    かっこいい;cool, stylish
     べんごし;lawyer, lawyers
     やさしい;kind, easy, nice
     せんせい;teacher, Professor, teachers
@@ -2045,10 +2045,10 @@ vocabulary = """
     です;there is, it's, I'm
     と;and, that, door
     みず;water
-    ごはん;rice, meal, meals
+    ごはん;rice, meal
     すし;sushi
     ください;please
-    おちゃ;green teas, green tea, tea
+    おちゃ;green tea
     """
 
 # Process the raw vocabulary string into a dictionary:
